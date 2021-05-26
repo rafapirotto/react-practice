@@ -2,7 +2,7 @@ import search from "./assets/search.png";
 import userImage from "./assets/user-image.png";
 import arrow from "./assets/arrow.png";
 
-const Header = (props) => {
+const Header = () => {
   return (
     <header class="flex ml-24 pr-10 py-20">
       <a href="/#">
