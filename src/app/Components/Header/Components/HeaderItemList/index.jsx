@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import HeaderItem from '../HeaderItem';
+import HeaderItem from "../HeaderItem";
 
 const HeaderItemList = () => (
   <div className="flex ml-32 items-center">

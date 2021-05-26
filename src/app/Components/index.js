@@ -1,4 +1,4 @@
-import Header from './Header';
-import MovieList from './MovieList';
+import Header from "./Header";
+import MovieList from "./MovieList";
 
 export { Header, MovieList };

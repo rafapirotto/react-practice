@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Movie = ({ url, alt }) => (
   <div className="mr-1">
