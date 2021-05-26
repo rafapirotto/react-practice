@@ -1,3 +1,5 @@
+import React from "react";
+
 import search from "./assets/search.png";
 import userImage from "./assets/user-image.png";
 import arrow from "./assets/arrow.png";
