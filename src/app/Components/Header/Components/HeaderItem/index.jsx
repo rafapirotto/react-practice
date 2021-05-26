@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const propTypes = {
   title: PropTypes.string.isRequired,
@@ -7,7 +7,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  styles: "",
+  styles: '',
 };
 
 const HeaderItem = ({ title, styles }) => (

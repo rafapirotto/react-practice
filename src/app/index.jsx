@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { Header, MovieList } from "./Components";
+import { Header, MovieList } from './Components';
 
 const App = () => (
   <>
