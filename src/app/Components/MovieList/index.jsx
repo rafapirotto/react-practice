@@ -18,12 +18,6 @@ const MovieList = ({ movies }) => (
           alt="otra"
         />
       </div>
-      <div>
-        <img
-          src="https://images.moviepostershop.com/replicas-movie-poster-1000778791.jpg"
-          alt="niIdea"
-        />
-      </div>
     </div>
   </main>
 );
