@@ -1,19 +1,53 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, connect } from 'react-redux';
 
-const MovieList = ({ movies }) => (
-  <main>
-    <div className="">
-      <h1 className="ml-24 text-3xl font-semibold">My List</h1>
-    </div>
-    <div className="flex mt-8 ml-24">
+import { getMovies } from './duck/operations';
+import { SUCCESS } from '../../../common/constants';
+
+const renderMovies = (movies) => (
+  <div className="flex mt-8 ml-24">
+    {movies.map(({ poster_url, title }) => (
       <div className="mr-1">
-        <img
-          src="https://images.moviepostershop.com/replicas-movie-poster-1000778791.jpg"
-          alt="replicas"
-        />
+        <img src={poster_url} alt={title} />
       </div>
-    </div>
-  </main>
+    ))}
+  </div>
 );
 
-export default MovieList;
+const renderTitle = (title) => (
+  <div className="">
+    <h1 className="ml-24 text-3xl font-semibold">{title}</h1>
+  </div>
+);
+
+const MovieList = (props) => {
+  const dispatch = useDispatch();
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    dispatch(getMovies());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    const { state, payload: movies } = props.movieList.status;
+
+    if (state === SUCCESS) {
+      setMovies(movies);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [props.movieList]);
+
+  return (
+    <main>
+      {renderTitle('My List')}
+      {renderMovies(movies)}
+    </main>
+  );
+};
+
+const mapStateToProps = (state) => ({
+  movieList: state.movieList,
+});
+
+export default connect(mapStateToProps)(MovieList);
