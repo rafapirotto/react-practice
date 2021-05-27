@@ -7,7 +7,7 @@ import { SUCCESS } from '../../../common/constants';
 const renderMovies = (movies) => (
   <div className="flex mt-8 ml-24">
     {movies.map(({ poster_url, title }) => (
-      <div className="mr-1">
+      <div className="mr-1" key={title}>
         <img src={poster_url} alt={title} />
       </div>
     ))}
