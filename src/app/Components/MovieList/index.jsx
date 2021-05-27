@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import { getMovies } from './duck/operations';
-import { SUCCESS } from '../../../common/constants';
+import { ERROR, LOADING, SUCCESS } from '../../../common/constants';
+import spinner from './assets/spinner.gif';
+import error from './assets/error.png';
+
+const propTypes = {
+  movies: PropTypes.array.isRequired,
+};
 
 const renderMovies = (movies) => (
-  <div className="flex mt-8 ml-24 mr-24 flex-wrap">
+  <div className="flex mt-8 ml-24 flex-wrap">
     {movies.map(({ poster_url, title }) => (
       <div className="mr-1 mb-4" key={title}>
         <img src={poster_url} alt={title} />
@@ -15,12 +22,24 @@ const renderMovies = (movies) => (
 );
 
 const renderTitle = (title) => (
-  <div className="">
+  <div>
     <h1 className="ml-24 text-3xl font-semibold">{title}</h1>
   </div>
 );
 
-const MovieList = (props) => {
+const renderSpinner = () => (
+  <div className="mt-40 flex justify-center">
+    <img src={spinner} alt="spinner" />
+  </div>
+);
+
+const renderError = () => (
+  <div className="mt-20 flex justify-center">
+    <img src={error} alt="error" />
+  </div>
+);
+
+const MovieList = ({ movieList }) => {
   const dispatch = useDispatch();
   const [movies, setMovies] = useState([]);
 
@@ -30,18 +49,20 @@ const MovieList = (props) => {
   }, []);
 
   useEffect(() => {
-    const { state, payload: movies } = props.movieList.status;
+    const { state, payload: movies } = movieList.status;
 
     if (state === SUCCESS) {
       setMovies(movies);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [props.movieList]);
+  }, [movieList]);
 
   return (
     <main>
       {renderTitle('My List')}
-      {renderMovies(movies)}
+      {movieList.status.state === SUCCESS && renderMovies(movies)}
+      {movieList.status.state === LOADING && renderSpinner()}
+      {movieList.status.state === ERROR && renderError()}
     </main>
   );
 };
@@ -49,5 +70,7 @@ const MovieList = (props) => {
 const mapStateToProps = (state) => ({
   movieList: state.movieList,
 });
+
+MovieList.propTypes = propTypes;
 
 export default connect(mapStateToProps)(MovieList);
