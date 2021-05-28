@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import { ERROR, LOADING, SUCCESS } from '../../../common/constants';
 
@@ -12,10 +13,14 @@ const propTypes = {
   state: PropTypes.string.isRequired,
 };
 
+const toSnakeCase = (s) => s.replaceAll(' ', '_');
+
 const renderMovies = (movies) => (
   <div className="flex mt-8 ml-24 flex-wrap">
     {movies.map(({ poster_url, title }) => (
-      <Movie url={poster_url} title={title} key={title} />
+      <Link to={`trailers/${toSnakeCase(title)}`}>
+        <Movie url={poster_url} title={title} />
+      </Link>
     ))}
   </div>
 );
