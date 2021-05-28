@@ -6,6 +6,7 @@ import { getMovies } from './duck/operations';
 import { ERROR, LOADING, SUCCESS } from '../../../common/constants';
 import spinner from './assets/spinner.gif';
 import error from './assets/error.png';
+import Movie from '../Movie';
 
 const propTypes = {
   movies: PropTypes.array.isRequired,
@@ -14,9 +15,7 @@ const propTypes = {
 const renderMovies = (movies) => (
   <div className="flex mt-8 ml-24 flex-wrap">
     {movies.map(({ poster_url, title }) => (
-      <div className="mr-1 mb-4" key={title}>
-        <img src={poster_url} alt={title} />
-      </div>
+      <Movie url={poster_url} title={title} />
     ))}
   </div>
 );
@@ -39,9 +38,12 @@ const renderError = () => (
   </div>
 );
 
+const renderComponentConditionally = (condition, callback) => condition && callback();
+
 const MovieList = ({ movieList }) => {
   const dispatch = useDispatch();
   const [movies, setMovies] = useState([]);
+  const { state, content } = movieList;
 
   useEffect(() => {
     dispatch(getMovies());
@@ -49,10 +51,8 @@ const MovieList = ({ movieList }) => {
   }, []);
 
   useEffect(() => {
-    const { state, payload: movies } = movieList.status;
-
     if (state === SUCCESS) {
-      setMovies(movies);
+      setMovies(content);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [movieList]);
@@ -60,9 +60,9 @@ const MovieList = ({ movieList }) => {
   return (
     <main>
       {renderTitle('My List')}
-      {movieList.status.state === SUCCESS && renderMovies(movies)}
-      {movieList.status.state === LOADING && renderSpinner()}
-      {movieList.status.state === ERROR && renderError()}
+      {renderComponentConditionally(state === SUCCESS, () => renderMovies(movies))}
+      {renderComponentConditionally(state === LOADING, () => renderSpinner())}
+      {renderComponentConditionally(state === ERROR, () => renderError())}
     </main>
   );
 };

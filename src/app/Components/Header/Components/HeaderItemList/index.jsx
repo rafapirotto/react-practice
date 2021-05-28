@@ -3,7 +3,7 @@ import React from 'react';
 import HeaderItem from '../HeaderItem';
 
 const HeaderItemList = () => (
-  <div className="flex ml-32 items-center">
+  <div className="flex ml-32 items-center flex-wrap">
     <HeaderItem title="Home" styles="mx-6 font-normal" />
     <HeaderItem title="Movies" styles="mx-6" />
     <HeaderItem title="Series" styles="mx-6" />

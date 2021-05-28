@@ -6,9 +6,9 @@ const propTypes = {
   alt: PropTypes.string.isRequired,
 };
 
-const Movie = ({ url, alt }) => (
-  <div className="mr-1">
-    <img src={url} alt={alt} />
+const Movie = ({ url, title }) => (
+  <div className="mr-1 mb-4" key={title}>
+    <img src={url} alt={title} />
   </div>
 );
 
