@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import { getMovies } from './duck/operations';
 import { ERROR, LOADING, SUCCESS } from '../../../common/constants';
@@ -12,10 +13,14 @@ const propTypes = {
   movies: PropTypes.array.isRequired,
 };
 
+const toSnakeCase = (s) => s.replaceAll(' ', '_');
+
 const renderMovies = (movies) => (
   <div className="flex mt-8 ml-24 flex-wrap">
     {movies.map(({ poster_url, title }) => (
-      <Movie url={poster_url} title={title} />
+      <Link to={`trailers/${toSnakeCase(title)}`}>
+        <Movie url={poster_url} title={title} />
+      </Link>
     ))}
   </div>
 );
