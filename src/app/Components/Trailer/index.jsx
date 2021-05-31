@@ -12,20 +12,18 @@ const renderTitle = (title) => (
   </div>
 );
 
-const renderTrailer = (url) => {
-  return (
-    <iframe
-      className="flex justify-center mt-24 ml-24"
-      width="560"
-      height="315"
-      src={url}
-      title="YouTube video player"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    />
-  );
-};
+const renderTrailer = (url) => (
+  <iframe
+    className="flex justify-center mt-24 ml-24"
+    width="560"
+    height="315"
+    src={url}
+    title="YouTube video player"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  />
+);
 
 const pascalCase = (s) => s.replaceAll('_', ' ');
 
