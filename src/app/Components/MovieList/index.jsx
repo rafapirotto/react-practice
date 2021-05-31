@@ -17,13 +17,11 @@ const defaultProps = {
   state: null,
 };
 
-const toSnakeCase = (s) => s.replaceAll(' ', '_');
-
 const renderMovies = (movies) => (
   <div className="flex mt-8 ml-24 flex-wrap">
-    {movies.map(({ poster_url, title }) => (
-      <Link to={`trailers/${toSnakeCase(title)}`} key={title}>
-        <Movie url={poster_url} title={title} key={title} />
+    {movies.map(({ poster_url, title, id }) => (
+      <Link to={`trailers/${id}`} key={id}>
+        <Movie url={poster_url} title={title} id={id} />
       </Link>
     ))}
   </div>
