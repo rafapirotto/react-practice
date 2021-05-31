@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
   title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 };
 
 const renderTitle = (title) => (
@@ -11,35 +12,29 @@ const renderTitle = (title) => (
   </div>
 );
 
-const renderTrailer = () => {
+const renderTrailer = (url) => {
   return (
     <iframe
       className="flex justify-center mt-24 ml-24"
       width="560"
       height="315"
-      src="https://www.youtube.com/embed/4CV41hoyS8A"
+      src={url}
       title="YouTube video player"
-      frameborder="0"
+      frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
+      allowFullScreen
     />
   );
 };
 
 const pascalCase = (s) => s.replaceAll('_', ' ');
 
-const Trailer = ({ match }) => {
-  const {
-    params: { movie },
-  } = match;
-
-  return (
-    <main>
-      {renderTitle(`${pascalCase(movie)}'s trailer`)}
-      {renderTrailer()}
-    </main>
-  );
-};
+const Trailer = ({ title, url }) => (
+  <main>
+    {renderTitle(`${pascalCase(title)}'s trailer`)}
+    {renderTrailer(url)}
+  </main>
+);
 
 Trailer.propTypes = propTypes;
 
