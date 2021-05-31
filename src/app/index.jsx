@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import { Header, MovieList, Trailer } from './Components';
+import { Header, Trailer } from './Components';
+import { MovieListContainer } from './Containers';
 
 const App = () => (
   <>
@@ -9,7 +10,7 @@ const App = () => (
     <Router>
       <Switch>
         <Route exact path="/">
-          <MovieList />
+          <MovieListContainer />
         </Route>
         <Route path="/trailers/:movie" component={Trailer} />
       </Switch>

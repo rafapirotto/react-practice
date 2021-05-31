@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-import GetMoviesReducer from './Components/MovieList/duck/reducers';
+import MoviesReducer from './Containers/MovieList/duck/reducers';
 
 const appReducer = combineReducers({
-  movieList: GetMoviesReducer,
+  movies: MoviesReducer,
 });
 
 const rootReducer = (state, action) => appReducer(state, action);

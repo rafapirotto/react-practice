@@ -2,25 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.arrow {
-  width: 8px;
-  height: 5px;
-}
-
 body {
   font-family: Source Sans Pro, sans-serif;
-}
-
-.movy {
-  font-family: 'Exo', sans-serif;
-}
-
-.search {
-  width: 17px;
-  height: 17px;
-}
-
-.user-image {
-  width: 28px;
-  height: 28px;
 }
