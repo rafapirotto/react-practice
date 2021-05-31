@@ -10,7 +10,11 @@ import Movie from '../Movie';
 
 const propTypes = {
   movies: PropTypes.array.isRequired,
-  state: PropTypes.string.isRequired,
+  state: PropTypes.string,
+};
+
+const defaultProps = {
+  state: null,
 };
 
 const toSnakeCase = (s) => s.replaceAll(' ', '_');
@@ -18,8 +22,8 @@ const toSnakeCase = (s) => s.replaceAll(' ', '_');
 const renderMovies = (movies) => (
   <div className="flex mt-8 ml-24 flex-wrap">
     {movies.map(({ poster_url, title }) => (
-      <Link to={`trailers/${toSnakeCase(title)}`}>
-        <Movie url={poster_url} title={title} />
+      <Link to={`trailers/${toSnakeCase(title)}`} key={title}>
+        <Movie url={poster_url} title={title} key={title} />
       </Link>
     ))}
   </div>
@@ -57,5 +61,6 @@ const MovieList = ({ movies, state }) => {
 };
 
 MovieList.propTypes = propTypes;
+MovieList.defaultProps = defaultProps;
 
 export default MovieList;
