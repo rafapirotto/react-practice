@@ -3,7 +3,7 @@ import { ERROR, SUCCESS, LOADING } from '../../../../common/constants';
 
 const initialState = { state: null, content: null };
 
-const GetMoviesReducer = (state = initialState, action) => {
+const MoviesReducer = (state = initialState, action) => {
   switch (action.type) {
     case REQUEST_GET_MOVIES:
       return {
@@ -25,4 +25,4 @@ const GetMoviesReducer = (state = initialState, action) => {
   }
 };
 
-export default GetMoviesReducer;
+export default MoviesReducer;

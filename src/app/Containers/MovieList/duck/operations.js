@@ -1,12 +1,12 @@
 import axios from 'axios';
 
 import { requestGetMovies, successGetMovies, errorGetMovies } from './actions';
-import { BASE_URL, MOVIES_URL } from '../../../utils';
 
 export const getMovies = () => (dispatch) => {
   dispatch(requestGetMovies());
-  axios
-    .get(`${BASE_URL}/${MOVIES_URL}`)
+
+  return axios
+    .get(`${process.env.REACT_APP_BASE_URL}/${process.env.REACT_APP_MOVIES_URL}`)
     .then((response) => {
       dispatch(successGetMovies(response.data));
     })

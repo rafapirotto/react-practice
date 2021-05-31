@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
   url: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 const Movie = ({ url, title }) => (
-  <div className="mr-1 mb-4" key={title}>
+  <div className="mr-1 mb-4">
     <img src={url} alt={title} />
   </div>
 );

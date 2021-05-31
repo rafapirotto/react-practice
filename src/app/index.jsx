@@ -1,11 +1,12 @@
 import React from 'react';
 
-import { Header, MovieList } from './Components';
+import { Header } from './Components';
+import { MovieListContainer } from './Containers';
 
 const App = () => (
   <>
     <Header />
-    <MovieList />
+    <MovieListContainer />
   </>
 );
 

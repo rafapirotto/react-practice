@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, connect } from 'react-redux';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-import { getMovies } from './duck/operations';
 import { ERROR, LOADING, SUCCESS } from '../../../common/constants';
-import spinner from './assets/spinner.gif';
-import error from './assets/error.png';
+
+import spinner from '../../../common/assets/spinner.gif';
+import error from '../../../common/assets/error.png';
 import Movie from '../Movie';
 
 const propTypes = {
   movies: PropTypes.array.isRequired,
+  state: PropTypes.string.isRequired,
 };
 
 const renderMovies = (movies) => (
   <div className="flex mt-8 ml-24 flex-wrap">
     {movies.map(({ poster_url, title }) => (
-      <Movie url={poster_url} title={title} />
+      <Movie url={poster_url} title={title} key={title} />
     ))}
   </div>
 );
@@ -40,23 +40,7 @@ const renderError = () => (
 
 const renderComponentConditionally = (condition, callback) => condition && callback();
 
-const MovieList = ({ movieList }) => {
-  const dispatch = useDispatch();
-  const [movies, setMovies] = useState([]);
-  const { state, content } = movieList;
-
-  useEffect(() => {
-    dispatch(getMovies());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
-    if (state === SUCCESS) {
-      setMovies(content);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [movieList]);
-
+const MovieList = ({ movies, state }) => {
   return (
     <main>
       {renderTitle('My List')}
@@ -67,10 +51,6 @@ const MovieList = ({ movieList }) => {
   );
 };
 
-const mapStateToProps = (state) => ({
-  movieList: state.movieList,
-});
-
 MovieList.propTypes = propTypes;
 
-export default connect(mapStateToProps)(MovieList);
+export default MovieList;
