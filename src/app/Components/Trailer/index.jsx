@@ -2,8 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
-  title: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  url: PropTypes.string,
+};
+
+const defaultProps = {
+  title: '',
+  url: '',
 };
 
 const renderTitle = (title) => (
@@ -35,5 +40,6 @@ const Trailer = ({ title, url }) => (
 );
 
 Trailer.propTypes = propTypes;
+Trailer.defaultProps = defaultProps;
 
 export default Trailer;
