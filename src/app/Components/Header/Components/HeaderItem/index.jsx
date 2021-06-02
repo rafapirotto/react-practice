@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const propTypes = {
   title: PropTypes.string.isRequired,
@@ -12,7 +13,7 @@ const defaultProps = {
 
 const HeaderItem = ({ title, styles }) => (
   <div className={styles}>
-    <a href="/#">{title} </a>
+    <Link to="/">{title}</Link>
   </div>
 );
 

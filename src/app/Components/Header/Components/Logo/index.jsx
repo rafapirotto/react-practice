@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import styles from './styles/Logo.module.css';
 
 const Logo = () => (
-  <a href="/#">
+  <Link to="/">
     <div className={`${styles.movy} text-4xl`}>Movy</div>
-  </a>
+  </Link>
 );
 
 export default Logo;

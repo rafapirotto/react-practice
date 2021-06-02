@@ -11,7 +11,9 @@ const MovieListContainer = () => {
   const { state, content } = useSelector((state) => state.movies);
 
   useEffect(() => {
-    dispatch(getMovies());
+    if (!content) {
+      dispatch(getMovies());
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

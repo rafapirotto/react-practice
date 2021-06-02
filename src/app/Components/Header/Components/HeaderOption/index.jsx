@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const propTypes = {
   src: PropTypes.string.isRequired,
@@ -8,9 +9,9 @@ const propTypes = {
 };
 
 const HeaderOption = ({ src, alt, styles }) => (
-  <a href="/#">
+  <Link to="/">
     <img src={src} className={`mx-3 ${styles}`} alt={alt} />
-  </a>
+  </Link>
 );
 
 HeaderOption.propTypes = propTypes;

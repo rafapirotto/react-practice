@@ -6,8 +6,8 @@ import { MovieListContainer, TrailerContainer } from './Containers';
 
 const App = () => (
   <>
-    <Header />
     <Router>
+      <Header />
       <Switch>
         <Route exact path="/">
           <MovieListContainer />
