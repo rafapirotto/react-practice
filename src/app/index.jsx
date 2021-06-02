@@ -1,12 +1,20 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { Header } from './Components';
-import { MovieListContainer } from './Containers';
+import { MovieListContainer, TrailerContainer } from './Containers';
 
 const App = () => (
   <>
     <Header />
-    <MovieListContainer />
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <MovieListContainer />
+        </Route>
+        <Route path="/trailers/:movieId" component={TrailerContainer} />
+      </Switch>
+    </Router>
   </>
 );
 
