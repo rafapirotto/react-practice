@@ -9,10 +9,8 @@ const App = () => (
     <Router>
       <Header />
       <Switch>
-        <Route exact path="/">
-          <MovieListContainer />
-        </Route>
-        <Route path="/trailers/:movieId" component={TrailerContainer} />
+        <Route exact path="/my-list" component={MovieListContainer} />
+        <Route exact path="/trailers/:movieId" component={TrailerContainer} />
       </Switch>
     </Router>
   </>

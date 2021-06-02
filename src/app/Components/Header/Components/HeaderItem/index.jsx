@@ -5,15 +5,17 @@ import { Link } from 'react-router-dom';
 const propTypes = {
   title: PropTypes.string.isRequired,
   styles: PropTypes.string,
+  to: PropTypes.string,
 };
 
 const defaultProps = {
   styles: '',
+  to: '/',
 };
 
-const HeaderItem = ({ title, styles }) => (
+const HeaderItem = ({ title, styles, to }) => (
   <div className={styles}>
-    <Link to="/">{title}</Link>
+    <Link to={to}>{title}</Link>
   </div>
 );
 
