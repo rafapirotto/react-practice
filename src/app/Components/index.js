@@ -1,4 +1,5 @@
 import Header from './Header';
 import MovieList from './MovieList';
+import Trailer from './Trailer';
 
-export { Header, MovieList };
+export { Header, MovieList, Trailer };

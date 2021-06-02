@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import { ERROR, LOADING, SUCCESS } from '../../../common/constants';
 
@@ -9,13 +10,19 @@ import Movie from '../Movie';
 
 const propTypes = {
   movies: PropTypes.array.isRequired,
-  state: PropTypes.string.isRequired,
+  state: PropTypes.string,
+};
+
+const defaultProps = {
+  state: null,
 };
 
 const renderMovies = (movies) => (
   <div className="flex mt-8 ml-24 flex-wrap">
-    {movies.map(({ poster_url, title }) => (
-      <Movie url={poster_url} title={title} key={title} />
+    {movies.map(({ poster_url, title, id }) => (
+      <Link to={`trailers/${id}`} key={id}>
+        <Movie url={poster_url} title={title} id={id} />
+      </Link>
     ))}
   </div>
 );
@@ -52,5 +59,6 @@ const MovieList = ({ movies, state }) => {
 };
 
 MovieList.propTypes = propTypes;
+MovieList.defaultProps = defaultProps;
 
 export default MovieList;
