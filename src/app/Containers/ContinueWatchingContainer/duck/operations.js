@@ -5,7 +5,7 @@ import { headers } from '../../../utils';
 
 export const getContinueWatching = () => (dispatch) => {
   dispatch(requestContinueWatching());
-  axios
+  return axios
     .get(`${process.env.REACT_APP_BASE_URL}/${process.env.REACT_APP_LISTS_URL}/2`, headers())
     .then((response) => {
       dispatch(successContinueWatching(response.data));

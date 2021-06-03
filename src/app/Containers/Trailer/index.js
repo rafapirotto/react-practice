@@ -10,16 +10,20 @@ const TrailerContainer = ({ match }) => {
   } = match;
 
   const dispatch = useDispatch();
-  const { content } = useSelector((state) => state.movie);
+  const { content: popularMovies } = useSelector((state) => state.popularMovies);
+  const { content: movieFromAPI } = useSelector((state) => state.movie);
+  console.log(popularMovies, 'popularMovies');
 
   useEffect(() => {
-    dispatch(getMovie(movieId));
+    if (!popularMovies) dispatch(getMovie(movieId));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const movie = movieFromAPI || popularMovies.find(({ id }) => id === parseInt(movieId));
+
   return (
     <main>
-      <Trailer title={content?.title} url={content?.trailer} />
+      <Trailer title={movie?.title} url={movie?.trailer} />
     </main>
   );
 };

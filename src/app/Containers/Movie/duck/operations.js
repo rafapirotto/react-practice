@@ -4,7 +4,8 @@ import { requestGetMovie, successGetMovie, errorGetMovie } from './actions';
 
 export const getMovie = (movieId) => (dispatch) => {
   dispatch(requestGetMovie(movieId));
-  axios
+  console.log('movieId', movieId);
+  return axios
     .get(`${process.env.REACT_APP_BASE_URL}/${process.env.REACT_APP_MOVIES_URL}/${movieId}`)
     .then((response) => {
       dispatch(successGetMovie(response.data));
