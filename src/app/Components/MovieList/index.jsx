@@ -9,12 +9,14 @@ import error from '../../../common/assets/error.png';
 import Movie from '../Movie';
 
 const propTypes = {
-  movies: PropTypes.array.isRequired,
+  movies: PropTypes.array,
   state: PropTypes.string,
+  title: PropTypes.string.isRequired,
 };
 
 const defaultProps = {
   state: null,
+  movies: [],
 };
 
 const renderMovies = (movies) => (
@@ -29,7 +31,7 @@ const renderMovies = (movies) => (
 
 const renderTitle = (title) => (
   <div>
-    <h1 className="ml-24 text-3xl font-semibold">{title}</h1>
+    <h1 className="ml-24 text-3xl font-medium">{title}</h1>
   </div>
 );
 
@@ -47,10 +49,10 @@ const renderError = () => (
 
 const renderComponentConditionally = (condition, callback) => condition && callback();
 
-const MovieList = ({ movies, state }) => {
+const MovieList = ({ movies, state, title }) => {
   return (
     <main>
-      {renderTitle('My List')}
+      {renderTitle(title)}
       {renderComponentConditionally(state === SUCCESS, () => renderMovies(movies))}
       {renderComponentConditionally(state === LOADING, () => renderSpinner())}
       {renderComponentConditionally(state === ERROR, () => renderError())}
