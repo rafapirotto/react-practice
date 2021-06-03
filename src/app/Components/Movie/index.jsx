@@ -7,8 +7,8 @@ const propTypes = {
 };
 
 const Movie = ({ url, title }) => (
-  <div className="mr-1 mb-4">
-    <img src={url} alt={title} />
+  <div className="mr-2 mb-4">
+    <img src={url} alt={title} className="max-w-sm max-h-48" />
   </div>
 );
 
