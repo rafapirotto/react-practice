@@ -18,7 +18,7 @@ const renderProgressBar = () => {
   const left = 100 - progress;
 
   return (
-    <div style={{ display: 'flex' }} className="mt-1">
+    <div className="flex mt-1">
       <div
         style={{
           background: 'linear-gradient(360deg, #0578FF 0%, #0578FF 100%)',
