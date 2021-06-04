@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { randomIntegerBetween } from '../../utils';
+import styles from './styles/Movie.module.css';
 
 const propTypes = {
   url: PropTypes.string.isRequired,
@@ -21,17 +22,13 @@ const renderProgressBar = () => {
     <div className="flex mt-1">
       <div
         style={{
-          background: 'linear-gradient(360deg, #0578FF 0%, #0578FF 100%)',
-          borderRadius: '100px 0px 0px 100px',
-          height: '7px',
           width: `${progress}%`,
         }}
+        className={styles.currentProgressBar}
       />
       <div
+        className={styles.leftProgressBar}
         style={{
-          background: '#D8D8D8',
-          borderRadius: '0px 100px 100px 0px',
-          height: '7px',
           width: `${left}%`,
         }}
       />
