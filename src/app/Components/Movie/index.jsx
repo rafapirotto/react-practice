@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { randomIntegerBetween } from '../../utils';
+
 const propTypes = {
   url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
@@ -10,8 +12,6 @@ const propTypes = {
 const defaultProps = {
   watchingProgress: null,
 };
-
-const randomIntegerBetween = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 const renderProgressBar = () => {
   const progress = randomIntegerBetween(1, 100);
