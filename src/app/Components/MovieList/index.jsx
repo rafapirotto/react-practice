@@ -22,7 +22,7 @@ const defaultProps = {
 };
 
 const renderMovies = (movies, watchingProgress) => (
-  <div className="flex mt-8 ml-24 flex-wrap">
+  <div className="flex mt-8 ml-24 overflow-auto">
     {movies.map(({ poster_url, title, id }) => (
       <Link to={`trailers/${id}`} key={id}>
         <Movie url={poster_url} title={title} id={id} watchingProgress={watchingProgress} />
