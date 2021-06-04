@@ -21,6 +21,7 @@ const ContinueWatchingContainer = () => {
         movies={selector?.content}
         state={selector?.state}
         title="Continue Watching for Rafa"
+        watchingProgress
       />
     </main>
   );

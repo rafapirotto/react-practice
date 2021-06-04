@@ -12,18 +12,20 @@ const propTypes = {
   movies: PropTypes.array,
   state: PropTypes.string,
   title: PropTypes.string.isRequired,
+  watchingProgress: PropTypes.bool,
 };
 
 const defaultProps = {
   state: null,
   movies: [],
+  watchingProgress: false,
 };
 
-const renderMovies = (movies) => (
+const renderMovies = (movies, watchingProgress) => (
   <div className="flex mt-8 ml-24 flex-wrap">
     {movies.map(({ poster_url, title, id }) => (
       <Link to={`trailers/${id}`} key={id}>
-        <Movie url={poster_url} title={title} id={id} />
+        <Movie url={poster_url} title={title} id={id} watchingProgress={watchingProgress} />
       </Link>
     ))}
   </div>
@@ -49,11 +51,13 @@ const renderError = () => (
 
 const renderComponentConditionally = (condition, callback) => condition && callback();
 
-const MovieList = ({ movies, state, title }) => {
+const MovieList = ({ movies, state, title, watchingProgress }) => {
   return (
     <main>
       {renderTitle(title)}
-      {renderComponentConditionally(state === SUCCESS, () => renderMovies(movies))}
+      {renderComponentConditionally(state === SUCCESS, () =>
+        renderMovies(movies, watchingProgress),
+      )}
       {renderComponentConditionally(state === LOADING, () => renderSpinner())}
       {renderComponentConditionally(state === ERROR, () => renderError())}
     </main>
