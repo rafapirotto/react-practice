@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import axios from 'axios';
 
-import { getMovie } from '../Movie/duck/operations';
 import { Trailer } from '../../Components';
 
 const TrailerContainer = ({ match }) => {
@@ -9,17 +9,31 @@ const TrailerContainer = ({ match }) => {
     params: { movieId },
   } = match;
 
-  const dispatch = useDispatch();
-  const { content } = useSelector((state) => state.movie);
+  const { content } = useSelector((state) => state.popularMovies);
+  const [movie, setMovie] = useState(null);
+
+  const fetchMovie = async (movieId) => {
+    const { data: movie } = await axios.get(
+      `${process.env.REACT_APP_BASE_URL}/${process.env.REACT_APP_MOVIES_URL}/${movieId}`,
+    );
+
+    setMovie(movie);
+  };
 
   useEffect(() => {
-    dispatch(getMovie(movieId));
+    if (!content) {
+      fetchMovie(movieId);
+    } else {
+      const storeMovie = content.find(({ id }) => id === parseInt(movieId));
+
+      setMovie(storeMovie);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <main>
-      <Trailer title={content?.title} url={content?.trailer} />
+      <Trailer title={movie?.title} url={movie?.trailer} />
     </main>
   );
 };

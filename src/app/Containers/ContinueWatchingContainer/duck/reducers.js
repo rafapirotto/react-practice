@@ -1,21 +1,25 @@
-import { REQUEST_GET_MOVIE, SUCCESS_GET_MOVIE, ERROR_GET_MOVIE } from './actionTypes';
+import {
+  REQUEST_GET_CONTINUE_WATCHING,
+  SUCCESS_CONTINUE_WATCHING,
+  ERROR_CONTINUE_WATCHING,
+} from './actionTypes';
 import { ERROR, SUCCESS, LOADING } from '../../../../common/constants';
 
 const initialState = { state: null, content: null };
 
-const MovieReducer = (state = initialState, action) => {
+const ContinueWatchingReducer = (state = initialState, action) => {
   switch (action.type) {
-    case REQUEST_GET_MOVIE:
+    case REQUEST_GET_CONTINUE_WATCHING:
       return {
         ...state,
         state: LOADING,
       };
-    case SUCCESS_GET_MOVIE:
+    case SUCCESS_CONTINUE_WATCHING:
       return {
         state: SUCCESS,
-        content: action.payload,
+        content: action.payload.movies,
       };
-    case ERROR_GET_MOVIE:
+    case ERROR_CONTINUE_WATCHING:
       return {
         state: ERROR,
         content: action.error,
@@ -25,4 +29,4 @@ const MovieReducer = (state = initialState, action) => {
   }
 };
 
-export default MovieReducer;
+export default ContinueWatchingReducer;

@@ -9,19 +9,23 @@ import error from '../../../common/assets/error.png';
 import Movie from '../Movie';
 
 const propTypes = {
-  movies: PropTypes.array.isRequired,
+  movies: PropTypes.array,
   state: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  watchingProgress: PropTypes.bool,
 };
 
 const defaultProps = {
   state: null,
+  movies: [],
+  watchingProgress: false,
 };
 
-const renderMovies = (movies) => (
-  <div className="flex mt-8 ml-24 flex-wrap">
+const renderMovies = (movies, watchingProgress) => (
+  <div className="flex mt-8 ml-24 overflow-auto">
     {movies.map(({ poster_url, title, id }) => (
       <Link to={`trailers/${id}`} key={id}>
-        <Movie url={poster_url} title={title} id={id} />
+        <Movie url={poster_url} title={title} id={id} watchingProgress={watchingProgress} />
       </Link>
     ))}
   </div>
@@ -29,7 +33,7 @@ const renderMovies = (movies) => (
 
 const renderTitle = (title) => (
   <div>
-    <h1 className="ml-24 text-3xl font-semibold">{title}</h1>
+    <h1 className="ml-24 text-3xl font-medium">{title}</h1>
   </div>
 );
 
@@ -47,11 +51,13 @@ const renderError = () => (
 
 const renderComponentConditionally = (condition, callback) => condition && callback();
 
-const MovieList = ({ movies, state }) => {
+const MovieList = ({ movies, state, title, watchingProgress }) => {
   return (
     <main>
-      {renderTitle('My List')}
-      {renderComponentConditionally(state === SUCCESS, () => renderMovies(movies))}
+      {renderTitle(title)}
+      {renderComponentConditionally(state === SUCCESS, () =>
+        renderMovies(movies, watchingProgress),
+      )}
       {renderComponentConditionally(state === LOADING, () => renderSpinner())}
       {renderComponentConditionally(state === ERROR, () => renderError())}
     </main>
