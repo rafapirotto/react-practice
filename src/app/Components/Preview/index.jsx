@@ -108,6 +108,28 @@ const Preview = ({ movie }) => {
           </div>
           <StarRating filledStars={4} halfFilledStars={1} />
         </div>
+        <div className="mt-20 w-4/6">
+          Set in a world only minutes from our own, "Black Mirror" unveils how modern technologies
+          can backfire and be used against their makers, every episode set in a slightly different
+          reality with different characters combating different types of technologies.
+        </div>
+        <div className="flex mt-40" style={{ color: '#92AAD7' }}>
+          <div className="flex items-center">
+            <div>
+              <img src={watchTrailer} alt="watch-later" />
+            </div>
+            <div className="ml-3">Watch Later</div>
+          </div>
+          <div className="flex items-center ml-12">
+            <div>
+              <img src={watchTrailer} alt="watch-trailer" />
+            </div>
+            <div className="ml-3">Watch trailer</div>
+          </div>
+          <div className="ml-12">
+            <img src={imdbLogo} alt="imdb-logo" />
+          </div>
+        </div>
       </div>
     </div>
   );
