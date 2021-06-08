@@ -2,6 +2,8 @@ import React from 'react';
 
 import backgroundImage from './assets/home-background.png';
 import clapperboard from './assets/clapperboard.png';
+import imdbLogo from './assets/imdb-logo.png';
+import watchTrailer from './assets/watch-trailer.png';
 import styles from './styles/Preview.module.css';
 
 import { StarRating } from '../../../common/Components';
@@ -28,7 +30,7 @@ const Preview = ({ movie }) => {
         </div>
         <div className="flex mt-20">
           <div className="text-9xl font-bold">BLACK MIRROR</div>
-          <div className="flex flex-grow justify-end items-center">
+          <div className="flex flex-grow justify-end items-center min-w-max">
             <button
               className={`font-semibold rounded-3xl p-6 flex items-center h-5 ${styles.buttonBorder}`}
             >
@@ -50,6 +52,28 @@ const Preview = ({ movie }) => {
             <div className="ml-4">Quentin Tarantino</div>
           </div>
           <StarRating filledStars={4} halfFilledStars={1} />
+        </div>
+        <div className="mt-20 w-4/6">
+          Set in a world only minutes from our own, "Black Mirror" unveils how modern technologies
+          can backfire and be used against their makers, every episode set in a slightly different
+          reality with different characters combating different types of technologies.
+        </div>
+        <div className="flex mt-40" style={{ color: '#92AAD7' }}>
+          <div className="flex items-center">
+            <div>
+              <img src={watchTrailer} alt="watch-later" />
+            </div>
+            <div className="ml-3">Watch Later</div>
+          </div>
+          <div className="flex items-center ml-12">
+            <div>
+              <img src={watchTrailer} alt="watch-trailer" />
+            </div>
+            <div className="ml-3">Watch trailer</div>
+          </div>
+          <div className="ml-12">
+            <img src={imdbLogo} alt="imdb-logo" />
+          </div>
         </div>
       </div>
     </div>
