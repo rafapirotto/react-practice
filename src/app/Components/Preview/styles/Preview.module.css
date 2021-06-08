@@ -1,0 +1,7 @@
+.buttonBorder {
+  border: 2.5px solid #92aad7;
+}
+
+.backgroundImage {
+  background: linear-gradient(180deg, #000000 0%, rgba(36, 36, 36, 0.0001) 100%);
+}
