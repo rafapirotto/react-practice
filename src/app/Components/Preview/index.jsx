@@ -93,6 +93,21 @@ const Preview = ({ movie }) => {
             </div>
           </div>
         </div>
+        <div className="flex mt-12">
+          <div
+            style={{ backgroundColor: '#FF056C' }}
+            className="font-semibold rounded-xl px-3 py-1"
+          >
+            2.30h
+          </div>
+          <div className="flex ml-12 items-center">
+            <div>
+              <img src={clapperboard} alt="clapperboard" />
+            </div>
+            <div className="ml-4">Quentin Tarantino</div>
+          </div>
+          <StarRating filledStars={4} halfFilledStars={1} />
+        </div>
       </div>
     </div>
   );
