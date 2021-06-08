@@ -116,18 +116,21 @@ const Preview = ({ movie }) => {
         <div className="flex mt-40" style={{ color: '#92AAD7' }}>
           <div className="flex items-center">
             <div>
-              <img src={watchTrailer} alt="watch-later" />
+              <img src={watchLater} alt="watch-later" className={styles.clickable} />
             </div>
             <div className="ml-3">Watch Later</div>
           </div>
           <div className="flex items-center ml-12">
             <div>
-              <img src={watchTrailer} alt="watch-trailer" />
+              <img src={watchTrailer} alt="watch-trailer" className={styles.clickable} />
             </div>
             <div className="ml-3">Watch trailer</div>
           </div>
           <div className="ml-12">
-            <img src={imdbLogo} alt="imdb-logo" />
+            <img src={imdbLogo} alt="imdb-logo" className={styles.clickable} />
+          </div>
+          <div className="flex justify-end flex-grow">
+            <img src={volume} alt="volume" className={styles.clickable} />
           </div>
         </div>
       </div>
