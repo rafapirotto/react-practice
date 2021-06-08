@@ -5,3 +5,11 @@
 .backgroundImage {
   background: linear-gradient(180deg, #000000 0%, rgba(36, 36, 36, 0.0001) 100%);
 }
+
+.clickable {
+  cursor: pointer;
+}
+
+.withoutOutline {
+  outline: none;
+}
