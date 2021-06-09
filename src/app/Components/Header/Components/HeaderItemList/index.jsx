@@ -8,7 +8,7 @@ const HeaderItemList = () => (
     <HeaderItem title="Movies" styles="mx-6" />
     <HeaderItem title="Series" styles="mx-6" />
     <HeaderItem title="Recently Added" styles="mx-6" />
-    <HeaderItem title="My List" styles="mx-6" to="my-list" />
+    <HeaderItem title="My List" styles="mx-6" to="/my-list" />
   </div>
 );
 
