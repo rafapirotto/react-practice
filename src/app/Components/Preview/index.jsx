@@ -16,7 +16,7 @@ const propTypes = {
 };
 
 const Preview = ({ movie }) => {
-  const { release_date, genres } = movie;
+  const { release_date, genres, title } = movie;
 
   const genresNames = genres.map(({ name }) => name).toString();
 
@@ -37,7 +37,7 @@ const Preview = ({ movie }) => {
             <div>{genresNames}</div>
           </div>
           <div className="flex mt-20">
-            <div className="text-9xl font-bold">BLACK MIRROR</div>
+            <div className="lg:text-9xl text-6xl font-bold">{title}</div>
             <div className="flex flex-grow justify-end items-center min-w-max">
               <button
                 className={`min-w-max font-semibold rounded-3xl p-6 flex items-center h-5 ${styles.buttonBorder} ${styles.withoutOutline}`}

@@ -20,11 +20,11 @@ const PreviewContainer = () => {
   const { content, state } = useSelector((state) => state.popularMovies);
 
   return (
-    <>
+    <div className="mb-80">
       {renderComponentConditionally(state === LOADING, <Spinner />)}
       {renderComponentConditionally(state === ERROR, <Error />)}
       {renderComponentConditionally(state === SUCCESS, content && renderComponent(content))}
-    </>
+    </div>
   );
 };
 

@@ -14,43 +14,27 @@ const defaultProps = {
   halfFilledStars: 0,
 };
 
-const renderFilledStars = (numberOfStars) => {
-  let filledStars = [];
+const renderStars = (numberOfFilledStars, numberOfHalfFilledStars) => {
+  let stars = [];
 
-  for (let index = 0; index < numberOfStars; index++) {
-    filledStars.push(
-      <img src={filledStar} alt="filled-star" className="px-1" key={`filled-star-${index + 1}`} />,
-    );
-  }
+  for (let index = 0; index < numberOfFilledStars + numberOfHalfFilledStars; index++) {
+    const isFilledStar = index < numberOfFilledStars;
 
-  return filledStars;
-};
-
-const renderHalfFilledStars = (numberOfStars) => {
-  let semiFilledStars = [];
-
-  for (let index = 0; index < numberOfStars; index++) {
-    semiFilledStars.push(
+    stars.push(
       <img
-        src={semiFilledStar}
-        alt="half-filled-star"
+        src={isFilledStar ? filledStar : semiFilledStar}
+        alt={`${isFilledStar ? 'filled' : 'half-filled'}-star`}
         className="px-1"
-        key={`half-filled-star-${index + 1}`}
+        key={`${isFilledStar ? 'filled-star' : 'half-filled-star'}-${index + 1}`}
       />,
     );
   }
-
-  return semiFilledStars;
+  return stars;
 };
 
-const StarRating = ({ filledStars, halfFilledStars }) => {
-  return (
-    <div className="ml-12 flex items-center">
-      {renderFilledStars(filledStars)}
-      {renderHalfFilledStars(halfFilledStars)}
-    </div>
-  );
-};
+const StarRating = ({ filledStars, halfFilledStars }) => (
+  <div className="ml-12 flex items-center">{renderStars(filledStars, halfFilledStars)}</div>
+);
 
 StarRating.propTypes = propTypes;
 StarRating.defaultProps = defaultProps;

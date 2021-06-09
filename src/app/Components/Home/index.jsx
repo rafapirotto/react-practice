@@ -10,7 +10,7 @@ import {
 const Home = () => (
   <>
     <PreviewContainer />
-    <div className="mt-80">
+    <div>
       <MyListContainer />
       <PopularContainer />
       <ContinueWatchingContainer />
