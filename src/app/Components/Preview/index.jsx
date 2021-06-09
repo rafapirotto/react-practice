@@ -110,7 +110,8 @@ const Preview = ({ movie }) => {
             <div className="text-9xl font-bold">BLACK MIRROR</div>
             <div className="flex flex-grow justify-end items-center min-w-max">
               <button
-                className={`font-semibold rounded-3xl p-6 flex items-center h-5 ${styles.buttonBorder} ${styles.withoutOutline}`}
+                className={`min-w-max font-semibold rounded-3xl p-6 flex items-center h-5 ${styles.buttonBorder} ${styles.withoutOutline}`}
+                style={{ marginRight: '10%' }}
               >
                 PG 13
               </button>
@@ -153,7 +154,12 @@ const Preview = ({ movie }) => {
               <img src={imdbLogo} alt="imdb-logo" className={styles.clickable} />
             </div>
             <div className="flex justify-end flex-grow">
-              <img src={volume} alt="volume" className={styles.clickable} />
+              <img
+                src={volume}
+                alt="volume"
+                className={styles.clickable}
+                style={{ marginRight: '8%' }}
+              />
             </div>
           </div>
         </div>
