@@ -39,4 +39,7 @@ const StarRating = ({ filledStars, halfFilledStars }) => (
 StarRating.propTypes = propTypes;
 StarRating.defaultProps = defaultProps;
 
+StarRating.propTypes = propTypes;
+StarRating.defaultProps = defaultProps;
+
 export default StarRating;
