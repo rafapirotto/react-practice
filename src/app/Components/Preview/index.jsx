@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import backgroundImage from './assets/home-background.png';
 import clapperboard from './assets/clapperboard.png';
@@ -9,6 +10,10 @@ import watchLater from './assets/watch-later.svg';
 import styles from './styles/Preview.module.css';
 
 import { StarRating } from '../../../common/Components';
+
+const propTypes = {
+  movie: PropTypes.object.isRequired,
+};
 
 const Preview = ({ movie }) => {
   const { release_date, genres } = movie;
@@ -92,5 +97,7 @@ const Preview = ({ movie }) => {
     </div>
   );
 };
+
+Preview.propTypes = propTypes;
 
 export default Preview;

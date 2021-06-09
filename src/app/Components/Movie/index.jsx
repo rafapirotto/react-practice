@@ -7,11 +7,11 @@ import styles from './styles/Movie.module.css';
 const propTypes = {
   url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  watchingProgress: PropTypes.number,
+  watchingProgress: PropTypes.bool,
 };
 
 const defaultProps = {
-  watchingProgress: null,
+  watchingProgress: false,
 };
 
 const renderProgressBar = () => {
