@@ -1,21 +1,19 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import { Header, Home } from './Components';
+import { Home, Header } from './Components';
 import { MyListContainer, TrailerContainer } from './Containers';
 import { HOME_ROUTE, MY_LIST_ROUTE, TRAILER_ROUTE } from './routes';
 
 const App = () => (
-  <>
-    <Router>
-      <Header />
-      <Switch>
-        <Route exact path={HOME_ROUTE} component={Home} />
-        <Route exact path={MY_LIST_ROUTE} component={MyListContainer} />
-        <Route exact path={TRAILER_ROUTE} component={TrailerContainer} />
-      </Switch>
-    </Router>
-  </>
+  <Router>
+    <Header />
+    <Switch>
+      <Route exact path={HOME_ROUTE} render={(props) => <Home {...props} />} />
+      <Route exact path={MY_LIST_ROUTE} render={() => <MyListContainer />} />
+      <Route exact path={TRAILER_ROUTE} render={(props) => <TrailerContainer {...props} />} />
+    </Switch>
+  </Router>
 );
 
 export default App;

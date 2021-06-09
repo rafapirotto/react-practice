@@ -1,0 +1,15 @@
+.buttonBorder {
+  border: 2.5px solid #92aad7;
+}
+
+.backgroundImage {
+  filter: brightness(40%);
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.withoutOutline {
+  outline: none;
+}

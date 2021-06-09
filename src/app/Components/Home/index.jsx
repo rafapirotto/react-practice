@@ -1,12 +1,20 @@
 import React from 'react';
 
-import { PopularContainer, MyListContainer, ContinueWatchingContainer } from '../../Containers';
+import {
+  PopularContainer,
+  MyListContainer,
+  ContinueWatchingContainer,
+  PreviewContainer,
+} from '../../Containers';
 
 const Home = () => (
   <>
-    <MyListContainer />
-    <PopularContainer />
-    <ContinueWatchingContainer />
+    <PreviewContainer />
+    <>
+      <MyListContainer />
+      <PopularContainer />
+      <ContinueWatchingContainer />
+    </>
   </>
 );
 

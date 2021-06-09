@@ -31,11 +31,7 @@ const TrailerContainer = ({ match }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return (
-    <main>
-      <Trailer title={movie?.title} url={movie?.trailer} />
-    </main>
-  );
+  return <Trailer title={movie?.title} url={movie?.trailer} />;
 };
 
 export default TrailerContainer;
