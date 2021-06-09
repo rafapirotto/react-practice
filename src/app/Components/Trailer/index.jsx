@@ -33,10 +33,10 @@ const renderTrailer = (url) => (
 const pascalCase = (s) => s.replaceAll('_', ' ');
 
 const Trailer = ({ title, url }) => (
-  <main>
+  <>
     {renderTitle(`${pascalCase(title)}'s trailer`)}
     {renderTrailer(url)}
-  </main>
+  </>
 );
 
 Trailer.propTypes = propTypes;

@@ -37,12 +37,10 @@ const renderProgressBar = () => {
 };
 
 const Movie = ({ url, title, watchingProgress }) => (
-  <>
-    <div className="mr-2 mb-4">
-      <img src={url} alt={title} className="max-w-sm max-h-48" />
-      {watchingProgress && renderProgressBar()}
-    </div>
-  </>
+  <div className="mr-2 mb-4">
+    <img src={url} alt={title} className="max-w-sm max-h-48" />
+    {watchingProgress && renderProgressBar()}
+  </div>
 );
 
 Movie.propTypes = propTypes;

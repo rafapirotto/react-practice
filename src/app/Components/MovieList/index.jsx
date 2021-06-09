@@ -53,14 +53,14 @@ const renderComponentConditionally = (condition, callback) => condition && callb
 
 const MovieList = ({ movies, state, title, watchingProgress }) => {
   return (
-    <main>
+    <>
       {renderTitle(title)}
       {renderComponentConditionally(state === SUCCESS, () =>
         renderMovies(movies, watchingProgress),
       )}
       {renderComponentConditionally(state === LOADING, () => renderSpinner())}
       {renderComponentConditionally(state === ERROR, () => renderError())}
-    </main>
+    </>
   );
 };
 
