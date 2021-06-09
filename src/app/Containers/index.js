@@ -1,13 +1,5 @@
-import PopularContainer from './PopularContainer';
 import TrailerContainer from './Trailer';
-import MyListContainer from './MyListContainer';
-import ContinueWatchingContainer from './ContinueWatchingContainer';
 import PreviewContainer from './PreviewContainer';
+import MovieListContainer from './MovieListContainer';
 
-export {
-  PopularContainer,
-  TrailerContainer,
-  MyListContainer,
-  ContinueWatchingContainer,
-  PreviewContainer,
-};
+export { TrailerContainer, PreviewContainer, MovieListContainer };
