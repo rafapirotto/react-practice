@@ -5,6 +5,8 @@ import {
   MyListContainer,
   ContinueWatchingContainer,
   PreviewContainer,
+  MostViewedContainer,
+  RecommendedMoviesContainer,
 } from '../../Containers';
 
 const Home = () => (
@@ -14,6 +16,11 @@ const Home = () => (
       <MyListContainer />
       <PopularContainer />
       <ContinueWatchingContainer />
+
+      <MostViewedContainer />
+      <RecommendedMoviesContainer />
+      <RecommendedMoviesContainer />
+      <RecommendedMoviesContainer />
     </div>
   </>
 );
