@@ -10,9 +10,11 @@ import {
 const Home = () => (
   <>
     <PreviewContainer />
-    <MyListContainer />
-    <PopularContainer />
-    <ContinueWatchingContainer />
+    <div className="mt-80">
+      <MyListContainer />
+      <PopularContainer />
+      <ContinueWatchingContainer />
+    </div>
   </>
 );
 
