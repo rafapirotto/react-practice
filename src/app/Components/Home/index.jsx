@@ -10,11 +10,11 @@ import {
 const Home = () => (
   <>
     <PreviewContainer />
-    <div>
+    <>
       <MyListContainer />
       <PopularContainer />
       <ContinueWatchingContainer />
-    </div>
+    </>
   </>
 );
 
