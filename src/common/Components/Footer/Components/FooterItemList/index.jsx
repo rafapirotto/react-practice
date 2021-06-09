@@ -2,9 +2,27 @@ import React from 'react';
 
 import FooterItem from '../FooterItem';
 
-const FooterItemList = () => (
-  <div
-    className="
+const FooterItemList = () => {
+  const footerTitles = [
+    'FAQ',
+    'Help Center',
+    'Account',
+    'Media Center',
+    'Privacy',
+    'Jobs',
+    'Ways to Watch',
+    'Terms of Use',
+    'Speed Test',
+    'Cookie Preferences',
+    'Corporate Information',
+    'Contact Us',
+  ];
+
+  const renderFooterItems = (titles) => titles.map((title) => <FooterItem title={title} />);
+
+  return (
+    <div
+      className="
               mt-12
               grid
               pb-40
@@ -18,20 +36,10 @@ const FooterItemList = () => (
               lg:pl-40
               lg:text-left
           "
-  >
-    <FooterItem title="FAQ" />
-    <FooterItem title="Help Center" />
-    <FooterItem title="Account" />
-    <FooterItem title="Media Center" />
-    <FooterItem title="Privacy" />
-    <FooterItem title="Jobs" />
-    <FooterItem title="Ways to Watch" />
-    <FooterItem title="Terms of Use" />
-    <FooterItem title="Speed Test" />
-    <FooterItem title="Cookie Preferences" />
-    <FooterItem title="Corporate Information" />
-    <FooterItem title="Contact Us" />
-  </div>
-);
+    >
+      {renderFooterItems(footerTitles)}
+    </div>
+  );
+};
 
 export default FooterItemList;
