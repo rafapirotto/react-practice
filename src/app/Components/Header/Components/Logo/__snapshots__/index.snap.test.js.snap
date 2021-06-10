@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It matches the snapshot 1`] = `
+<a
+  href="/"
+  onClick={[Function]}
+>
+  <div
+    className="movy text-4xl"
+  >
+    Movy
+  </div>
+</a>
+`;

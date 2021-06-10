@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It matches the snapshot 1`] = `
+<header
+  className="flex ml-24 pr-10 py-20 w-11/12 z-10 absolute"
+>
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    <div
+      className="movy text-4xl"
+    >
+      Movy
+    </div>
+  </a>
+  <div
+    className="flex ml-32 items-center flex-wrap"
+  >
+    <div
+      className="mx-6 font-normal"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        Home
+      </a>
+    </div>
+    <div
+      className="mx-6"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        Movies
+      </a>
+    </div>
+    <div
+      className="mx-6"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        Series
+      </a>
+    </div>
+    <div
+      className="mx-6"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        Recently Added
+      </a>
+    </div>
+    <div
+      className="mx-6"
+    >
+      <a
+        href="/my-list"
+        onClick={[Function]}
+      >
+        My List
+      </a>
+    </div>
+  </div>
+  <div
+    className="flex items-center flex-grow justify-end"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <img
+        alt="search"
+        className="mx-3 search"
+        src="search.png"
+      />
+    </a>
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <img
+        alt="user"
+        className="mx-3 userImage"
+        src="user-image.png"
+      />
+    </a>
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <img
+        alt="arrow"
+        className="mx-3 arrow"
+        src="arrow.png"
+      />
+    </a>
+  </div>
+</header>
+`;

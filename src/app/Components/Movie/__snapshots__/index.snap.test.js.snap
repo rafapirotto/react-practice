@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It matches the snapshot 1`] = `
+<div
+  className="mr-2 mb-4"
+>
+  <img
+    alt="some-movie"
+    className="max-w-sm max-h-48"
+    src="some-url"
+  />
+  <div
+    className="flex mt-1"
+  >
+    <div
+      className="currentProgressBar"
+      style={
+        Object {
+          "width": "38%",
+        }
+      }
+    />
+    <div
+      className="leftProgressBar"
+      style={
+        Object {
+          "width": "62%",
+        }
+      }
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It matches the snapshot 1`] = `
+<div
+  className="flex ml-32 items-center flex-wrap"
+>
+  <div
+    className="mx-6 font-normal"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+  </div>
+  <div
+    className="mx-6"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Movies
+    </a>
+  </div>
+  <div
+    className="mx-6"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Series
+    </a>
+  </div>
+  <div
+    className="mx-6"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Recently Added
+    </a>
+  </div>
+  <div
+    className="mx-6"
+  >
+    <a
+      href="/my-list"
+      onClick={[Function]}
+    >
+      My List
+    </a>
+  </div>
+</div>
+`;

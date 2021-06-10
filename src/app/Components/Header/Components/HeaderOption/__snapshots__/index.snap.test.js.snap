@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It matches the snapshot 1`] = `
+<a
+  href="/"
+  onClick={[Function]}
+>
+  <img
+    alt="search"
+    className="mx-3 "
+    src="search.png"
+  />
+</a>
+`;

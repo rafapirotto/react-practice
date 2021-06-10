@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It matches the snapshot 1`] = `
+Array [
+  <div>
+    <h1
+      className="ml-24 text-3xl font-semibold"
+    >
+      title's trailer
+    </h1>
+  </div>,
+  <iframe
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen={true}
+    className="flex justify-center mt-24 ml-24"
+    frameBorder="0"
+    height="315"
+    src="some-url"
+    title="YouTube video player"
+    width="560"
+  />,
+]
+`;

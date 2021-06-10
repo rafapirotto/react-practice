@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It matches the snapshot 1`] = `
+<div
+  className="flex items-center flex-grow justify-end"
+>
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    <img
+      alt="search"
+      className="mx-3 search"
+      src="search.png"
+    />
+  </a>
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    <img
+      alt="user"
+      className="mx-3 userImage"
+      src="user-image.png"
+    />
+  </a>
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    <img
+      alt="arrow"
+      className="mx-3 arrow"
+      src="arrow.png"
+    />
+  </a>
+</div>
+`;

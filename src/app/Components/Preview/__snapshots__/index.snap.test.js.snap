@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It matches the snapshot 1`] = `
+<div>
+  <img
+    alt="background"
+    className="absolute w-screen backgroundImage"
+    src="home-background.png"
+  />
+  <div
+    className="flex justify-center mb-4"
+  >
+    <div
+      className="flex-col container ml-56 z-10 mt-56"
+    >
+      <div
+        className="flex"
+      >
+        <div>
+          2002
+        </div>
+        <div
+          className="flex items-center mx-2"
+        >
+          <div
+            className="rounded-sm bg-white w-4px h-4px"
+          />
+        </div>
+        <div>
+          Comedy
+        </div>
+      </div>
+      <div
+        className="flex mt-20"
+      >
+        <div
+          className="lg:text-9xl text-6xl font-bold"
+        >
+          title
+        </div>
+        <div
+          className="flex flex-grow justify-end items-center min-w-max"
+        >
+          <button
+            className="min-w-max font-semibold rounded-3xl p-6 flex items-center h-5 buttonBorder withoutOutline"
+            style={
+              Object {
+                "marginRight": "10%",
+              }
+            }
+          >
+            PG 13
+          </button>
+        </div>
+      </div>
+      <div
+        className="flex mt-12"
+      >
+        <div
+          className="font-semibold rounded-xl px-3 py-1"
+          style={
+            Object {
+              "backgroundColor": "#FF056C",
+            }
+          }
+        >
+          2.30h
+        </div>
+        <div
+          className="flex ml-12 items-center"
+        >
+          <div>
+            <img
+              alt="clapperboard"
+              src="clapperboard.png"
+            />
+          </div>
+          <div
+            className="ml-4"
+          >
+            Quentin Tarantino
+          </div>
+        </div>
+        <div
+          className="ml-12 flex items-center"
+        >
+          <img
+            alt="filled-star"
+            className="px-1"
+            src="filled-star.png"
+          />
+          <img
+            alt="filled-star"
+            className="px-1"
+            src="filled-star.png"
+          />
+          <img
+            alt="filled-star"
+            className="px-1"
+            src="filled-star.png"
+          />
+          <img
+            alt="filled-star"
+            className="px-1"
+            src="filled-star.png"
+          />
+          <img
+            alt="half-filled-star"
+            className="px-1"
+            src="semi-filled-star.png"
+          />
+        </div>
+      </div>
+      <div
+        className="mt-20 w-4/6"
+      >
+        Set in a world only minutes from our own, "Black Mirror" unveils how modern technologies can backfire and be used against their makers, every episode set in a slightly different reality with different characters combating different types of technologies.
+      </div>
+      <div
+        className="flex mt-40"
+        style={
+          Object {
+            "color": "#92AAD7",
+          }
+        }
+      >
+        <div
+          className="flex items-center"
+        >
+          <div>
+            <img
+              alt="watch-later"
+              className="clickable"
+              src="watch-later.svg"
+            />
+          </div>
+          <div
+            className="ml-3"
+          >
+            Watch Later
+          </div>
+        </div>
+        <div
+          className="flex items-center ml-12"
+        >
+          <div>
+            <img
+              alt="watch-trailer"
+              className="clickable"
+              src="watch-trailer.png"
+            />
+          </div>
+          <div
+            className="ml-3"
+          >
+            Watch trailer
+          </div>
+        </div>
+        <div
+          className="ml-12"
+        >
+          <img
+            alt="imdb-logo"
+            className="clickable"
+            src="imdb-logo.png"
+          />
+        </div>
+        <div
+          className="flex justify-end flex-grow"
+        >
+          <img
+            alt="volume"
+            className="clickable"
+            src="volume.png"
+            style={
+              Object {
+                "marginRight": "8%",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
