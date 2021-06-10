@@ -18,7 +18,8 @@ const FooterItemList = () => {
     'Contact Us',
   ];
 
-  const renderFooterItems = (titles) => titles.map((title) => <FooterItem title={title} />);
+  const renderFooterItems = (titles) =>
+    titles.map((title) => <FooterItem title={title} key={title} />);
 
   return (
     <div
