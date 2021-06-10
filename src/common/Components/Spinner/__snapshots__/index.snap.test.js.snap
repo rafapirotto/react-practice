@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It matches the snapshot 1`] = `
+<div
+  className="mt-40 flex justify-center"
+>
+  <img
+    alt="spinner"
+    src="spinner.gif"
+  />
+</div>
+`;

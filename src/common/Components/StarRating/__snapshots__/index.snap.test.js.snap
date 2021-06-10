@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It matches the snapshot 1`] = `
+<div
+  className="ml-12 flex items-center"
+>
+  <img
+    alt="filled-star"
+    className="px-1"
+    src="filled-star.png"
+  />
+  <img
+    alt="filled-star"
+    className="px-1"
+    src="filled-star.png"
+  />
+  <img
+    alt="filled-star"
+    className="px-1"
+    src="filled-star.png"
+  />
+  <img
+    alt="filled-star"
+    className="px-1"
+    src="filled-star.png"
+  />
+  <img
+    alt="half-filled-star"
+    className="px-1"
+    src="semi-filled-star.png"
+  />
+</div>
+`;
