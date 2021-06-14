@@ -16,7 +16,7 @@ Array [
     frameBorder="0"
     height="315"
     src="some-url"
-    title="YouTube video player"
+    title="title"
     width="560"
   />,
 ]

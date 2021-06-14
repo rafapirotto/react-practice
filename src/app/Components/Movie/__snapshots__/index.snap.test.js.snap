@@ -16,7 +16,7 @@ exports[`It matches the snapshot 1`] = `
       className="currentProgressBar"
       style={
         Object {
-          "width": "38%",
+          "width": "80%",
         }
       }
     />
@@ -24,7 +24,7 @@ exports[`It matches the snapshot 1`] = `
       className="leftProgressBar"
       style={
         Object {
-          "width": "62%",
+          "width": "20%",
         }
       }
     />
