@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 
 import FooterTitle from '.';
 
-test('It matches the snapshot', () => {
+it('matches the snapshot', () => {
   const component = renderer.create(<FooterTitle title="example" />);
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();

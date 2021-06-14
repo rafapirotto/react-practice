@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import HeaderOption from '.';
 import search from '../../assets/search.png';
 
-test('It matches the snapshot', () => {
+it('matches the snapshot', () => {
   const component = renderer.create(
     <Router>
       <HeaderOption src={search} alt="search" styles="" />

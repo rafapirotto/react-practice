@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 
 import Movie from '.';
 
-test('It matches the snapshot', () => {
+it('matches the snapshot', () => {
   const component = renderer.create(<Movie url="some-url" title="some-movie" watchingProgress />);
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();

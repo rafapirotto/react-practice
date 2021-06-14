@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`It matches the snapshot 1`] = `
+exports[`matches the snapshot 1`] = `
 <div
   className="flex ml-32 items-center flex-wrap"
 >

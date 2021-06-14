@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`It matches the snapshot 1`] = `
+exports[`matches the snapshot 1`] = `
 <div
   className=" mt-12 grid pb-40 sm:grid-cols-1 sm:pl-0 sm:text-center md:grid-cols-2 md:pl-0 md:text-center lg:grid-cols-4 lg:pl-40 lg:text-left "
 >

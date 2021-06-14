@@ -11,7 +11,7 @@ import rootReducer from '../../../app/rootReducer';
 
 const createStoreWithMiddleware = applyMiddleware(thunk, logger)(createStore);
 
-test('It matches the snapshot', () => {
+it('matches the snapshot', () => {
   const component = renderer.create(
     <Provider store={createStoreWithMiddleware(rootReducer)}>
       <Router>
