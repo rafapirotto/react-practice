@@ -1,22 +1,27 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import logger from 'redux-logger';
+import configureStore from 'redux-mock-store';
 
 import Home from '.';
-import rootReducer from '../../../app/rootReducer';
 
-const createStoreWithMiddleware = applyMiddleware(thunk, logger)(createStore);
+const middlewares = [thunk];
 
 it('matches the snapshot', () => {
+  const mockStore = configureStore(middlewares);
+  const initialState = {
+    popularMovies: { popularMovies: [] },
+    myListMovies: { myListMovies: [] },
+    continueWatchingMovies: { continueWatchingMovies: [] },
+    mostViewedMovies: { mostViewedMovies: [] },
+    recommendedMovies: { recommendedMovies: [] },
+  };
+  const store = mockStore(initialState);
+
   const component = renderer.create(
-    <Provider store={createStoreWithMiddleware(rootReducer)}>
-      <Router>
-        <Home />
-      </Router>
+    <Provider store={store}>
+      <Home />
     </Provider>,
   );
   const tree = component.toJSON();
