@@ -17,13 +17,13 @@ const renderTitle = (title) => (
   </div>
 );
 
-const renderTrailer = (url) => (
+const renderTrailer = (url, title) => (
   <iframe
     className="flex justify-center mt-24 ml-24"
     width="560"
     height="315"
     src={url}
-    title="YouTube video player"
+    title={title}
     frameBorder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowFullScreen
@@ -35,7 +35,7 @@ const pascalCase = (s) => s.replaceAll('_', ' ');
 const Trailer = ({ title, url }) => (
   <>
     {renderTitle(`${pascalCase(title)}'s trailer`)}
-    {renderTrailer(url)}
+    {renderTrailer(url, title)}
   </>
 );
 
