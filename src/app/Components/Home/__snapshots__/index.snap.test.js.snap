@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches the snapshot 1`] = `
+Array [
+  <div
+    className="mb-80"
+  />,
+  <div
+    className="mt-80"
+  >
+    <main>
+      <div>
+        <h1
+          className="ml-24 text-3xl font-medium"
+        >
+          My List
+        </h1>
+      </div>
+    </main>
+    <main>
+      <div>
+        <h1
+          className="ml-24 text-3xl font-medium"
+        >
+          Popular on Movy
+        </h1>
+      </div>
+    </main>
+    <main>
+      <div>
+        <h1
+          className="ml-24 text-3xl font-medium"
+        >
+          Continue Watching for Rafa
+        </h1>
+      </div>
+    </main>
+    <main>
+      <div>
+        <h1
+          className="ml-24 text-3xl font-medium"
+        >
+          Most Viewed
+        </h1>
+      </div>
+    </main>
+    <main>
+      <div>
+        <h1
+          className="ml-24 text-3xl font-medium"
+        >
+          Recommended movies
+        </h1>
+      </div>
+    </main>
+    <main>
+      <div>
+        <h1
+          className="ml-24 text-3xl font-medium"
+        >
+          Recommended movies
+        </h1>
+      </div>
+    </main>
+    <main>
+      <div>
+        <h1
+          className="ml-24 text-3xl font-medium"
+        >
+          Recommended movies
+        </h1>
+      </div>
+    </main>
+  </div>,
+]
+`;

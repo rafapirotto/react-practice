@@ -15,7 +15,8 @@ const defaultProps = {
 };
 
 const renderProgressBar = () => {
-  const progress = randomIntegerBetween(1, 100);
+  const progress = 80;
+  // const progress = randomIntegerBetween(1, 100);
   const left = 100 - progress;
 
   return (
