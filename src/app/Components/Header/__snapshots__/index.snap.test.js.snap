@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`matches the snapshot 1`] = `
+exports[`Matches the snapshot 1`] = `
 <header
   className="flex ml-24 pr-10 py-20 w-11/12 z-10 absolute"
 >

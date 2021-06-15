@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import HeaderOptionList from '.';
 
-it('matches the snapshot', () => {
+it('Matches the snapshot', () => {
   const component = renderer.create(
     <Router>
       <HeaderOptionList />

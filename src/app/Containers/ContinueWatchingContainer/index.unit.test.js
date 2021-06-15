@@ -2,12 +2,13 @@ import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import { mount } from 'enzyme';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 import MovieListContainer from '../MovieListContainer';
 import { MovieList } from '../../Components';
 import { getContinueWatching } from '../ContinueWatchingContainer/duck/operations';
 import { SUCCESS } from '../../../common/constants';
-import { BrowserRouter as Router } from 'react-router-dom';
+import Movie from '../../Components/Movie';
 
 const middlewares = [thunk];
 const mockStore = configureStore(middlewares);
@@ -30,16 +31,21 @@ const getContainerWithSpecificState = (state) => {
 };
 
 describe('ContinueWatchingContainer', () => {
+  const state = {
+    continueWatchingMovies: {
+      state: SUCCESS,
+      content: [{ id: 1, title: 'Black Mirror', poster_url: 'somelink.com' }],
+    },
+  };
+  const container = getContainerWithSpecificState(state);
+
   it('Renders the MovieList component', () => {
-    const state = {
-      continueWatchingMovies: {
-        state: SUCCESS,
-        content: [{ id: 1, title: 'Black Mirror', poster_url: 'somelink.com' }],
-      },
-    };
-
-    const container = getContainerWithSpecificState(state);
-
     expect(container.find(MovieList)).toHaveLength(1);
+  });
+  it('Renders the Link component', () => {
+    expect(container.find(Link)).toHaveLength(1);
+  });
+  it('Renders the Movie component', () => {
+    expect(container.find(Movie)).toHaveLength(1);
   });
 });
