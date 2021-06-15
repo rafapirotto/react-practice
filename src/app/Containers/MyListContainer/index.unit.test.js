@@ -6,19 +6,28 @@ import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 import MovieListContainer from '../MovieListContainer';
 import { MovieList } from '../../Components';
-import { getMyList } from '../MyListContainer/duck/operations';
 import { SUCCESS } from '../../../common/constants';
 import Movie from '../../Components/Movie';
 
 const middlewares = [thunk];
 const mockStore = configureStore(middlewares);
 
+const operation = () => [
+  {
+    id: 1,
+    title: 'Black Mirror',
+
+    poster_url:
+      'https://m.media-amazon.com/images/M/MV5BYTM3YWVhMDMtNjczMy00NGEyLWJhZDctYjNhMTRkNDE0ZTI1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg',
+  },
+];
+
 const getContainerWithSpecificState = (state) => {
   const store = mockStore(state);
   const container = mount(
     <Provider store={store}>
       <Router>
-        <MovieListContainer operation={getMyList} title="My List" selector={state.myListMovies} />
+        <MovieListContainer operation={operation} title="My List" selector={state.myListMovies} />
       </Router>
     </Provider>,
   );
