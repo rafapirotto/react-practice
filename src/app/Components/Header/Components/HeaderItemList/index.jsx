@@ -4,11 +4,11 @@ import HeaderItem from '../HeaderItem';
 
 const HeaderItemList = () => (
   <div className="flex ml-32 items-center flex-wrap">
-    <HeaderItem title="Home" styles="mx-6 font-normal" />
-    <HeaderItem title="Movies" styles="mx-6" />
-    <HeaderItem title="Series" styles="mx-6" />
-    <HeaderItem title="Recently Added" styles="mx-6" />
-    <HeaderItem title="My List" styles="mx-6" to="/my-list" />
+    <HeaderItem title="Home" styles="mx-6 font-normal" id="home-btn" />
+    <HeaderItem title="Movies" styles="mx-6" id="movies-btn" />
+    <HeaderItem title="Series" styles="mx-6" id="series-btn" />
+    <HeaderItem title="Recently Added" styles="mx-6" id="recently-added-btn" />
+    <HeaderItem title="My List" styles="mx-6" to="/my-list" id="my-list-btn" />
   </div>
 );
 

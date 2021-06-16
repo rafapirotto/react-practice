@@ -7,7 +7,7 @@ import HeaderItem from '.';
 it('Matches the snapshot', () => {
   const component = renderer.create(
     <Router>
-      <HeaderItem title="title" styles="" to="/" />
+      <HeaderItem title="title" styles="" to="/" id="1" />
     </Router>,
   );
   const tree = component.toJSON();

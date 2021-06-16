@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { paramCase } from 'change-case';
 
 import { ERROR, LOADING, SUCCESS } from '../../../common/constants';
 
@@ -21,11 +22,16 @@ const defaultProps = {
   watchingProgress: false,
 };
 
-const renderMovies = (movies, watchingProgress) => (
-  <div className="flex mt-8 ml-24 overflow-auto">
+const renderMovies = (movies, watchingProgress, title) => (
+  <div className="flex mt-8 ml-24 overflow-auto" id={paramCase(title)}>
     {movies.map(({ poster_url, title, id }) => (
       <Link to={`trailers/${id}`} key={id}>
-        <Movie url={poster_url} title={title} id={id} watchingProgress={watchingProgress} />
+        <Movie
+          url={poster_url}
+          title={paramCase(title)}
+          id={id}
+          watchingProgress={watchingProgress}
+        />
       </Link>
     ))}
   </div>
@@ -56,7 +62,7 @@ const MovieList = ({ movies, state, title, watchingProgress }) => {
     <>
       {renderTitle(title)}
       {renderComponentConditionally(state === SUCCESS, () =>
-        renderMovies(movies, watchingProgress),
+        renderMovies(movies, watchingProgress, title),
       )}
       {renderComponentConditionally(state === LOADING, () => renderSpinner())}
       {renderComponentConditionally(state === ERROR, () => renderError())}

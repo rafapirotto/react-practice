@@ -6,6 +6,7 @@ const propTypes = {
   title: PropTypes.string.isRequired,
   styles: PropTypes.string,
   to: PropTypes.string,
+  id: PropTypes.string.isRequired,
 };
 
 const defaultProps = {
@@ -13,8 +14,8 @@ const defaultProps = {
   to: '/',
 };
 
-const HeaderItem = ({ title, styles, to }) => (
-  <div className={styles}>
+const HeaderItem = ({ title, styles, to, id }) => (
+  <div id={id} className={styles}>
     <Link to={to}>{title}</Link>
   </div>
 );

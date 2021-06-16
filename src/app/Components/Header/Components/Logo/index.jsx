@@ -5,7 +5,9 @@ import styles from './styles/Logo.module.css';
 
 const Logo = () => (
   <Link to="/">
-    <div className={`${styles.movy} text-4xl`}>Movy</div>
+    <div id="logo-btn" className={`${styles.movy} text-4xl`}>
+      Movy
+    </div>
   </Link>
 );
 
