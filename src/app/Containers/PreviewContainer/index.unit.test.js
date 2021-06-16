@@ -22,39 +22,45 @@ const getContainerWithSpecificState = (state) => {
 };
 
 describe('PreviewContainer', () => {
-  it('Renders the Spinner component when the state value is LOADING', () => {
-    const state = { popularMovies: { state: LOADING, content: null } };
+  describe('when the state value is LOADING', () => {
+    it('Renders the Spinner component', () => {
+      const state = { popularMovies: { state: LOADING, content: null } };
 
-    const container = getContainerWithSpecificState(state);
+      const container = getContainerWithSpecificState(state);
 
-    expect(container.find(Spinner)).toHaveLength(1);
+      expect(container.find(Spinner)).toHaveLength(1);
+    });
   });
 
-  it('Renders the Error component when the state value is ERROR', () => {
-    const state = { popularMovies: { state: ERROR, content: null } };
+  describe('when the state value is ERROR', () => {
+    it('Renders the Error component', () => {
+      const state = { popularMovies: { state: ERROR, content: null } };
 
-    const container = getContainerWithSpecificState(state);
+      const container = getContainerWithSpecificState(state);
 
-    expect(container.find(Error)).toHaveLength(1);
+      expect(container.find(Error)).toHaveLength(1);
+    });
   });
 
-  it('Renders the PreviewContainer when the state value is SUCCESS', () => {
-    const movies = [
-      {
-        title: 'Black Mirror',
-        release_date: '2010',
-        genres: [{ name: 'Comedy' }, { name: 'Horror' }],
-      },
-    ];
-    const state = {
-      popularMovies: {
-        state: SUCCESS,
-        content: movies,
-      },
-    };
+  describe('when the state value is SUCCESS', () => {
+    it('Renders the PreviewContainer', () => {
+      const movies = [
+        {
+          title: 'Black Mirror',
+          release_date: '2010',
+          genres: [{ name: 'Comedy' }, { name: 'Horror' }],
+        },
+      ];
+      const state = {
+        popularMovies: {
+          state: SUCCESS,
+          content: movies,
+        },
+      };
 
-    const container = getContainerWithSpecificState(state);
+      const container = getContainerWithSpecificState(state);
 
-    expect(container.find(PreviewContainer)).toHaveLength(1);
+      expect(container.find(PreviewContainer)).toHaveLength(1);
+    });
   });
 });

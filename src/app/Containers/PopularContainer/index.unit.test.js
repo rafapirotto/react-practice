@@ -1,13 +1,13 @@
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import { Provider } from 'react-redux';
 import { mount } from 'enzyme';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import MovieListContainer from '../MovieListContainer';
 import { MovieList } from '../../Components';
 import { SUCCESS } from '../../../common/constants';
 import Movie from '../../Components/Movie';
+import { ProviderRouterWrapper } from '../../../common/Components';
 
 const middlewares = [thunk];
 const mockStore = configureStore(middlewares);
@@ -15,15 +15,13 @@ const mockStore = configureStore(middlewares);
 const getContainerWithSpecificState = (state) => {
   const store = mockStore(state);
   const container = mount(
-    <Provider store={store}>
-      <Router>
-        <MovieListContainer
-          operation={jest.fn}
-          title="Popular on Movy"
-          selector={state.popularMovies}
-        />
-      </Router>
-    </Provider>,
+    <ProviderRouterWrapper store={store}>
+      <MovieListContainer
+        operation={jest.fn}
+        title="Popular on Movy"
+        selector={state.popularMovies}
+      />
+    </ProviderRouterWrapper>,
   );
 
   return container;
