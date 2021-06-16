@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 
 import MovieList from '.';
 
-it('matches the snapshot', () => {
+it('Matches the snapshot', () => {
   const component = renderer.create(
     <MovieList
       movies={[{ poster_url: 'url', title: 'title', id: 2 }]}

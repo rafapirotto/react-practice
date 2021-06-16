@@ -8,7 +8,7 @@ import Home from '.';
 
 const middlewares = [thunk];
 
-it('matches the snapshot', () => {
+it('Matches the snapshot', () => {
   const mockStore = configureStore(middlewares);
   const initialState = {
     popularMovies: { popularMovies: [] },

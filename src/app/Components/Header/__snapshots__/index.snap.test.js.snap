@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`matches the snapshot 1`] = `
+exports[`Matches the snapshot 1`] = `
 <header
   className="flex ml-24 pr-10 py-20 w-11/12 z-10 absolute"
 >
@@ -10,6 +10,7 @@ exports[`matches the snapshot 1`] = `
   >
     <div
       className="movy text-4xl"
+      id="logo-btn"
     >
       Movy
     </div>
@@ -19,6 +20,7 @@ exports[`matches the snapshot 1`] = `
   >
     <div
       className="mx-6 font-normal"
+      id="home-btn"
     >
       <a
         href="/"
@@ -29,6 +31,7 @@ exports[`matches the snapshot 1`] = `
     </div>
     <div
       className="mx-6"
+      id="movies-btn"
     >
       <a
         href="/"
@@ -39,6 +42,7 @@ exports[`matches the snapshot 1`] = `
     </div>
     <div
       className="mx-6"
+      id="series-btn"
     >
       <a
         href="/"
@@ -49,6 +53,7 @@ exports[`matches the snapshot 1`] = `
     </div>
     <div
       className="mx-6"
+      id="recently-added-btn"
     >
       <a
         href="/"
@@ -59,6 +64,7 @@ exports[`matches the snapshot 1`] = `
     </div>
     <div
       className="mx-6"
+      id="my-list-btn"
     >
       <a
         href="/my-list"

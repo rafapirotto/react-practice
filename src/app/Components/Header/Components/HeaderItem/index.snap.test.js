@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import HeaderItem from '.';
 
-it('matches the snapshot', () => {
+it('Matches the snapshot', () => {
   const component = renderer.create(
     <Router>
       <HeaderItem title="title" styles="" to="/" />

@@ -1,4 +1,4 @@
-import TrailerContainer from './Trailer';
+import TrailerContainer from './TrailerContainer';
 import PreviewContainer from './PreviewContainer';
 import MovieListContainer from './MovieListContainer';
 
