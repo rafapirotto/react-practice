@@ -8,8 +8,10 @@ context('MostViewed', () => {
     cy.visit(HOME_URL);
   });
 
-  it('Should redirect to the "trailers" url', () => {
-    cy.get('#most-viewed > :first-child').click();
-    cy.url().should('include', TRAILERS_ROUTE);
+  describe('Clicking the first movie in the most viewed section', () => {
+    it('Should redirect to the "trailers" url', () => {
+      cy.get('#most-viewed > :first-child').click();
+      cy.url().should('include', TRAILERS_ROUTE);
+    });
   });
 });

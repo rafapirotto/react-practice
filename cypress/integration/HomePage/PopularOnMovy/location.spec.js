@@ -8,8 +8,10 @@ context('PopularOnMovy', () => {
     cy.visit(HOME_URL);
   });
 
-  it('Should redirect to the "trailers" url', () => {
-    cy.get('#popular-on-movy > :first-child').click();
-    cy.url().should('include', TRAILERS_ROUTE);
+  describe('Clicking the first movie in the popular on movy section', () => {
+    it('Should redirect to the "trailers" url', () => {
+      cy.get('#popular-on-movy > :first-child').click();
+      cy.url().should('include', TRAILERS_ROUTE);
+    });
   });
 });

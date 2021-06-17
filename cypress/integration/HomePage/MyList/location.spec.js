@@ -8,8 +8,10 @@ context('MyList', () => {
     cy.visit(HOME_URL);
   });
 
-  it('Should redirect to the "trailers" url', () => {
-    cy.get('#my-list > :first-child').click();
-    cy.url().should('include', TRAILERS_ROUTE);
+  describe('Clicking the first movie in my list section', () => {
+    it('Should redirect to the "trailers" url', () => {
+      cy.get('#my-list > :first-child').click();
+      cy.url().should('include', TRAILERS_ROUTE);
+    });
   });
 });

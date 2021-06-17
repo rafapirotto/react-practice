@@ -28,7 +28,7 @@ const Home = () => {
         />
         <MovieListContainer
           operation={getContinueWatching}
-          title="Continue Watching for Rafa"
+          title="Continue Watching"
           selector={continueWatchingMoviesSelector}
           watchingProgress
         />

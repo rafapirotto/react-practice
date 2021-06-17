@@ -8,8 +8,10 @@ context('ContinueWatching', () => {
     cy.visit(HOME_URL);
   });
 
-  it('Should redirect to the "trailers" url', () => {
-    cy.get('#continue-watching-for-rafa > :first-child').click();
-    cy.url().should('include', TRAILERS_ROUTE);
+  describe('Clicking the first movie in the continue watching section', () => {
+    it('Should redirect to the "trailers" url', () => {
+      cy.get('#continue-watching > :first-child').click();
+      cy.url().should('include', TRAILERS_ROUTE);
+    });
   });
 });
