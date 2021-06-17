@@ -3,6 +3,7 @@
 exports[`Matches the snapshot 1`] = `
 <div
   className=""
+  id="1"
 >
   <a
     href="/"
