@@ -3,7 +3,7 @@ import { Switch, Redirect, Route } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import { MovieListContainer, TrailerContainer } from '../../Containers';
-import { Home, Header, Footer } from '../';
+import { Home } from '../';
 import { getMyList } from '../../Containers/MyListContainer/duck/operations';
 
 import { DASHBOARD_ROUTE, MY_LIST_ROUTE, TRAILER_ROUTE } from '../../routes';
@@ -13,7 +13,6 @@ const Dashboard = () => {
 
   return (
     <div>
-      <Header />
       <Switch>
         <Route exact path={DASHBOARD_ROUTE} render={(props) => <Home {...props} />} />
         <Route
@@ -30,7 +29,6 @@ const Dashboard = () => {
         <Route exact path={TRAILER_ROUTE} render={(props) => <TrailerContainer {...props} />} />
         <Redirect exact from={`${DASHBOARD_ROUTE}/*`} to={DASHBOARD_ROUTE} />
       </Switch>
-      <Footer />
     </div>
   );
 };
