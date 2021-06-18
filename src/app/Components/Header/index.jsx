@@ -6,6 +6,8 @@ import HeaderItemList from './Components/HeaderItemList';
 import HeaderOptionList from './Components/HeaderOptionList';
 import Logo from './Components/Logo';
 
+import { DASHBOARD_ROUTE } from '../../routes';
+
 const propTypes = {
   position: PropTypes.string,
 };
@@ -16,7 +18,7 @@ const defaultProps = {
 
 const Header = () => {
   const { pathname } = useLocation();
-  const position = pathname === '/' ? 'absolute' : '';
+  const position = pathname === DASHBOARD_ROUTE ? 'absolute' : '';
 
   return (
     <header className={`flex ml-24 pr-10 py-20 w-11/12 z-10 ${position}`}>
