@@ -5,6 +5,7 @@ import { HOME_URL, MY_LIST_URL } from '../../../constants';
 context('Header', () => {
   beforeEach(() => {
     cy.viewport(1024, 768);
+    window.localStorage.setItem('token', process.env.REACT_APP_TOKEN);
     cy.visit(HOME_URL);
   });
 
