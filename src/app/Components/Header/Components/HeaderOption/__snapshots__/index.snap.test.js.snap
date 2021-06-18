@@ -2,7 +2,7 @@
 
 exports[`Matches the snapshot 1`] = `
 <a
-  href="/"
+  href="/dashboard"
   onClick={[Function]}
 >
   <img
