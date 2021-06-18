@@ -4,26 +4,12 @@ import { Link } from 'react-router-dom';
 import { LOGIN_ROUTE } from '../../routes';
 import backgroundImage from './assets/background.png';
 import fb from './assets/fb.png';
-import { Footer } from '../';
 
 const Login = () => {
   return (
     <div className="text-lg text-white font-extralight">
       <div className="h-screen bg-cover">
         {/* <img src={backgroundImage} className="w-screen" alt="background" /> */}
-        <header className="flex pl-24 pr-10 py-20">
-          <div className="movy text-4xl">
-            <Link to={LOGIN_ROUTE}>Movy</Link>
-          </div>
-          <div className="flex flex-grow justify-end">
-            <div className="mr-4">
-              <Link to={LOGIN_ROUTE}>Register</Link>
-            </div>
-            <Link to={LOGIN_ROUTE}>
-              <div className="text-center rounded-md w-24 h-8 bg-blue-500">Login</div>
-            </Link>
-          </div>
-        </header>
         <main className="flex justify-center items-center">
           <div className="bg-black rounded-md bg-opacity-80 w-1/4 min-w-min px-12">
             <form>
@@ -84,7 +70,6 @@ const Login = () => {
           </div>
         </main>
       </div>
-      <Footer />
     </div>
   );
 };
