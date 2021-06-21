@@ -3,12 +3,12 @@ import { Link, withRouter } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { LOGIN_ROUTE } from '../../routes';
-import backgroundImage from './assets/background.png';
 import fb from './assets/fb.png';
 import { login } from '../../Containers/LoginContainer/duck/operations';
 import { Error, Spinner } from '../../../common/Components';
 import { LOADING, SUCCESS, ERROR } from '../../../common/constants';
 import { DASHBOARD_ROUTE } from '../../routes';
+import styles from './styles/Login.module.css';
 
 const Login = (props) => {
   const [email, setEmail] = useState('');
@@ -25,8 +25,9 @@ const Login = (props) => {
 
   return (
     <div>
-      <img src={backgroundImage} alt="background" className="w-screen" />
-      <div className="flex justify-center items-center">
+      <div
+        className={`flex justify-center items-center bg-cover p-44 h-screen ${styles.background}`}
+      >
         <div className="bg-black rounded-md bg-opacity-80 w-1/4 min-w-min px-12">
           <form>
             <div className="mt-10 text-center">
