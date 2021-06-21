@@ -2,13 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { LOGIN_ROUTE } from '../../../../routes';
+import Logo from '../Logo';
 
 const NonAuthenticatedHeader = () => (
   <div className="absolute w-full">
     <header className="flex pl-24 pr-10 py-20">
-      <div className="movy text-4xl">
-        <Link to={LOGIN_ROUTE}>Movy</Link>
-      </div>
+      <Logo to={LOGIN_ROUTE} />
       <div className="flex flex-grow justify-end">
         <div className="mr-4">
           <Link to={LOGIN_ROUTE}>Register</Link>

@@ -22,7 +22,7 @@ const AuthenticatedHeader = () => {
 
   return (
     <header className={`flex ml-24 pr-10 py-20 w-11/12 z-10 ${position}`}>
-      <Logo />
+      <Logo to={DASHBOARD_ROUTE} />
       <HeaderItemList />
       <HeaderOptionList />
     </header>
