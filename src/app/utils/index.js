@@ -12,3 +12,5 @@ export const randomIntegerBetween = (min, max) => Math.floor(Math.random() * (ma
 export const getRandomIndex = (array) => Math.floor(Math.random() * array.length);
 
 export const isAuthenticated = () => localStorage.getItem('token');
+
+export const saveUserDataInLocalStorage = (token) => localStorage.setItem('token', token);
