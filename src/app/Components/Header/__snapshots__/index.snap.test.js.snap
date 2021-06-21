@@ -1,42 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Matches the snapshot 1`] = `
-<header
-  className="flex pl-24 pr-10 py-20"
+<div
+  className="absolute w-full"
 >
-  <div
-    className="movy text-4xl"
+  <header
+    className="flex pl-24 pr-10 py-20"
   >
-    <a
-      href="/"
-      onClick={[Function]}
-    >
-      Movy
-    </a>
-  </div>
-  <div
-    className="flex flex-grow justify-end"
-  >
-    <div
-      className="mr-4"
-    >
-      <a
-        href="/"
-        onClick={[Function]}
-      >
-        Register
-      </a>
-    </div>
     <a
       href="/"
       onClick={[Function]}
     >
       <div
-        className="text-center rounded-md w-24 h-8 bg-blue-500"
+        className="text-4xl movy"
+        id="logo-btn"
       >
-        Login
+        Movy
       </div>
     </a>
-  </div>
-</header>
+    <div
+      className="flex flex-grow justify-end"
+    >
+      <div
+        className="mr-4"
+      >
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          Register
+        </a>
+      </div>
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <div
+          className="text-center rounded-md w-24 h-8 bg-blue-500"
+        >
+          Login
+        </div>
+      </a>
+    </div>
+  </header>
+</div>
 `;
