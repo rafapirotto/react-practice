@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
+import { DASHBOARD_ROUTE } from '../../../../routes';
+
 const propTypes = {
   title: PropTypes.string.isRequired,
   styles: PropTypes.string,
@@ -11,7 +13,7 @@ const propTypes = {
 
 const defaultProps = {
   styles: '',
-  to: '/',
+  to: DASHBOARD_ROUTE,
 };
 
 const HeaderItem = ({ title, styles, to, id }) => (

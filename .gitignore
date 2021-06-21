@@ -2,4 +2,4 @@
 # Created by https://www.toptal.com/developers/gitignore/api/react
 node_modules
 .DS_*
-.env*
+.env

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { paramCase } from 'change-case';
 
 import { ERROR, LOADING, SUCCESS } from '../../../common/constants';
+import { TRAILERS_ROUTE } from '../../routes';
 
 import spinner from '../../../common/assets/spinner.gif';
 import error from '../../../common/assets/error.png';
@@ -25,7 +26,7 @@ const defaultProps = {
 const renderMovies = (movies, watchingProgress, title) => (
   <div className="flex mt-8 ml-24 overflow-auto" id={paramCase(title)}>
     {movies.map(({ poster_url, title, id }) => (
-      <Link to={`trailers/${id}`} key={id}>
+      <Link to={`${TRAILERS_ROUTE}/${id}`} key={id}>
         <Movie
           url={poster_url}
           title={paramCase(title)}

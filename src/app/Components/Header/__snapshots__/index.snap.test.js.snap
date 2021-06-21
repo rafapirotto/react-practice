@@ -2,10 +2,10 @@
 
 exports[`Matches the snapshot 1`] = `
 <header
-  className="flex ml-24 pr-10 py-20 w-11/12 z-10 absolute"
+  className="flex ml-24 pr-10 py-20 w-11/12 z-10 "
 >
   <a
-    href="/"
+    href="/dashboard"
     onClick={[Function]}
   >
     <div
@@ -23,7 +23,7 @@ exports[`Matches the snapshot 1`] = `
       id="home-btn"
     >
       <a
-        href="/"
+        href="/dashboard"
         onClick={[Function]}
       >
         Home
@@ -34,7 +34,7 @@ exports[`Matches the snapshot 1`] = `
       id="movies-btn"
     >
       <a
-        href="/"
+        href="/dashboard"
         onClick={[Function]}
       >
         Movies
@@ -45,7 +45,7 @@ exports[`Matches the snapshot 1`] = `
       id="series-btn"
     >
       <a
-        href="/"
+        href="/dashboard"
         onClick={[Function]}
       >
         Series
@@ -56,7 +56,7 @@ exports[`Matches the snapshot 1`] = `
       id="recently-added-btn"
     >
       <a
-        href="/"
+        href="/dashboard"
         onClick={[Function]}
       >
         Recently Added
@@ -67,7 +67,7 @@ exports[`Matches the snapshot 1`] = `
       id="my-list-btn"
     >
       <a
-        href="/my-list"
+        href="/dashboard/my-list"
         onClick={[Function]}
       >
         My List
@@ -78,7 +78,7 @@ exports[`Matches the snapshot 1`] = `
     className="flex items-center flex-grow justify-end"
   >
     <a
-      href="/"
+      href="/dashboard"
       onClick={[Function]}
     >
       <img
@@ -88,7 +88,7 @@ exports[`Matches the snapshot 1`] = `
       />
     </a>
     <a
-      href="/"
+      href="/dashboard"
       onClick={[Function]}
     >
       <img
@@ -98,7 +98,7 @@ exports[`Matches the snapshot 1`] = `
       />
     </a>
     <a
-      href="/"
+      href="/dashboard"
       onClick={[Function]}
     >
       <img

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { randomIntegerBetween } from '../../utils';
 import styles from './styles/Movie.module.css';
 
 const propTypes = {

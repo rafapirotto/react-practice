@@ -1,7 +1,8 @@
 import Error from './Error';
 import Spinner from './Spinner';
 import StarRating from './StarRating';
-import Footer from './Footer';
 import ProviderRouterWrapper from './ProviderRouterWrapper';
+import PrivateRoute from './PrivateRoute';
+import PublicRoute from './PublicRoute';
 
-export { Error, Spinner, StarRating, Footer, ProviderRouterWrapper };
+export { Error, Spinner, StarRating, ProviderRouterWrapper, PrivateRoute, PublicRoute };

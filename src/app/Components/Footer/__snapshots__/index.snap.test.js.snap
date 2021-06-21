@@ -16,7 +16,7 @@ exports[`Matches the snapshot 1`] = `
       className="pb-2"
     >
       <a
-        href="/"
+        href="/dashboard"
         onClick={[Function]}
       >
         FAQ
@@ -26,7 +26,7 @@ exports[`Matches the snapshot 1`] = `
       className="pb-2"
     >
       <a
-        href="/"
+        href="/dashboard"
         onClick={[Function]}
       >
         Help Center
@@ -36,7 +36,7 @@ exports[`Matches the snapshot 1`] = `
       className="pb-2"
     >
       <a
-        href="/"
+        href="/dashboard"
         onClick={[Function]}
       >
         Account
@@ -46,7 +46,7 @@ exports[`Matches the snapshot 1`] = `
       className="pb-2"
     >
       <a
-        href="/"
+        href="/dashboard"
         onClick={[Function]}
       >
         Media Center
@@ -56,7 +56,7 @@ exports[`Matches the snapshot 1`] = `
       className="pb-2"
     >
       <a
-        href="/"
+        href="/dashboard"
         onClick={[Function]}
       >
         Privacy
@@ -66,7 +66,7 @@ exports[`Matches the snapshot 1`] = `
       className="pb-2"
     >
       <a
-        href="/"
+        href="/dashboard"
         onClick={[Function]}
       >
         Jobs
@@ -76,7 +76,7 @@ exports[`Matches the snapshot 1`] = `
       className="pb-2"
     >
       <a
-        href="/"
+        href="/dashboard"
         onClick={[Function]}
       >
         Ways to Watch
@@ -86,7 +86,7 @@ exports[`Matches the snapshot 1`] = `
       className="pb-2"
     >
       <a
-        href="/"
+        href="/dashboard"
         onClick={[Function]}
       >
         Terms of Use
@@ -96,7 +96,7 @@ exports[`Matches the snapshot 1`] = `
       className="pb-2"
     >
       <a
-        href="/"
+        href="/dashboard"
         onClick={[Function]}
       >
         Speed Test
@@ -106,7 +106,7 @@ exports[`Matches the snapshot 1`] = `
       className="pb-2"
     >
       <a
-        href="/"
+        href="/dashboard"
         onClick={[Function]}
       >
         Cookie Preferences
@@ -116,7 +116,7 @@ exports[`Matches the snapshot 1`] = `
       className="pb-2"
     >
       <a
-        href="/"
+        href="/dashboard"
         onClick={[Function]}
       >
         Corporate Information
@@ -126,7 +126,7 @@ exports[`Matches the snapshot 1`] = `
       className="pb-2"
     >
       <a
-        href="/"
+        href="/dashboard"
         onClick={[Function]}
       >
         Contact Us
