@@ -1,112 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Matches the snapshot 1`] = `
-<header
-  className="flex ml-24 pr-10 py-20 w-11/12 z-10 "
+<div
+  className="absolute w-full"
 >
-  <a
-    href="/dashboard"
-    onClick={[Function]}
-  >
-    <div
-      className="movy text-4xl"
-      id="logo-btn"
-    >
-      Movy
-    </div>
-  </a>
-  <div
-    className="flex ml-32 items-center flex-wrap"
-  >
-    <div
-      className="mx-6 font-normal"
-      id="home-btn"
-    >
-      <a
-        href="/dashboard"
-        onClick={[Function]}
-      >
-        Home
-      </a>
-    </div>
-    <div
-      className="mx-6"
-      id="movies-btn"
-    >
-      <a
-        href="/dashboard"
-        onClick={[Function]}
-      >
-        Movies
-      </a>
-    </div>
-    <div
-      className="mx-6"
-      id="series-btn"
-    >
-      <a
-        href="/dashboard"
-        onClick={[Function]}
-      >
-        Series
-      </a>
-    </div>
-    <div
-      className="mx-6"
-      id="recently-added-btn"
-    >
-      <a
-        href="/dashboard"
-        onClick={[Function]}
-      >
-        Recently Added
-      </a>
-    </div>
-    <div
-      className="mx-6"
-      id="my-list-btn"
-    >
-      <a
-        href="/dashboard/my-list"
-        onClick={[Function]}
-      >
-        My List
-      </a>
-    </div>
-  </div>
-  <div
-    className="flex items-center flex-grow justify-end"
+  <header
+    className="flex pl-24 pr-10 py-20"
   >
     <a
-      href="/dashboard"
+      href="/"
       onClick={[Function]}
     >
-      <img
-        alt="search"
-        className="mx-3 search"
-        src="search.png"
-      />
+      <div
+        className="text-4xl movy"
+        id="logo-btn"
+      >
+        Movy
+      </div>
     </a>
-    <a
-      href="/dashboard"
-      onClick={[Function]}
+    <div
+      className="flex flex-grow justify-end"
     >
-      <img
-        alt="user"
-        className="mx-3 userImage"
-        src="user-image.png"
-      />
-    </a>
-    <a
-      href="/dashboard"
-      onClick={[Function]}
-    >
-      <img
-        alt="arrow"
-        className="mx-3 arrow"
-        src="arrow.png"
-      />
-    </a>
-  </div>
-</header>
+      <div
+        className="mr-4"
+      >
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          Register
+        </a>
+      </div>
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <div
+          className="text-center rounded-md w-24 h-8 bg-blue-500"
+        >
+          Login
+        </div>
+      </a>
+    </div>
+  </header>
+</div>
 `;

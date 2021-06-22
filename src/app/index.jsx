@@ -5,12 +5,12 @@ import { Login, Dashboard, Footer, Header } from './Components';
 import { LOGIN_ROUTE, DASHBOARD_ROUTE } from './routes';
 import { PrivateRoute, PublicRoute } from '../common/Components';
 
-const App = () => (
+const App = (props) => (
   <Router>
     <Header />
     <Switch>
       <PrivateRoute path={DASHBOARD_ROUTE} Component={Dashboard} />
-      <PublicRoute exact path={LOGIN_ROUTE} Component={Login} />
+      <PublicRoute exact path={LOGIN_ROUTE} Component={() => <Login {...props} />} />
       <Redirect from="*" to={LOGIN_ROUTE} />
     </Switch>
     <Footer />

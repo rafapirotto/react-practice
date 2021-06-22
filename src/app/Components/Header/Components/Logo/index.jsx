@@ -1,15 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import styles from './styles/Logo.module.css';
-import { DASHBOARD_ROUTE } from '../../../../routes';
 
-const Logo = () => (
-  <Link to={DASHBOARD_ROUTE}>
-    <div id="logo-btn" className={`${styles.movy} text-4xl`}>
+const propTypes = {
+  to: PropTypes.string.isRequired,
+};
+
+const Logo = ({ to }) => (
+  <Link to={to}>
+    <div id="logo-btn" className={`text-4xl ${styles.movy}`}>
       Movy
     </div>
   </Link>
 );
+
+Logo.propTypes = propTypes;
 
 export default Logo;
