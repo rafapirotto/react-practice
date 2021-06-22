@@ -15,23 +15,23 @@ exports[`Matches the snapshot 1`] = `
     />
   </a>
   <a
-    href="/dashboard"
+    href="/dashboard/edit-profile"
     onClick={[Function]}
   >
     <img
       alt="user"
       className="mx-3 userImage"
-      src="user-image.png"
+      src="https://randomuser.me/api/portraits/med/men/75.jpg"
     />
   </a>
   <a
-    href="/dashboard"
+    href="/"
     onClick={[Function]}
   >
     <img
-      alt="arrow"
-      className="mx-3 arrow"
-      src="arrow.png"
+      alt="logout"
+      className="mx-3 logoutBtn"
+      src="https://toppng.com/uploads/preview/logout-comments-logout-icon-white-transparent-11563200974vvdol0inuw.png"
     />
   </a>
 </div>
