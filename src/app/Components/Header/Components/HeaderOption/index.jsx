@@ -8,14 +8,22 @@ const propTypes = {
   src: PropTypes.string.isRequired,
   styles: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
+  to: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
-const HeaderOption = ({ src, alt, styles }) => (
-  <Link to={DASHBOARD_ROUTE}>
+const defaultProps = {
+  to: DASHBOARD_ROUTE,
+  onClick: () => {},
+};
+
+const HeaderOption = ({ src, alt, styles, to, onClick }) => (
+  <Link to={to} onClick={onClick}>
     <img src={src} className={`mx-3 ${styles}`} alt={alt} />
   </Link>
 );
 
 HeaderOption.propTypes = propTypes;
+HeaderOption.defaultProps = defaultProps;
 
 export default HeaderOption;

@@ -6,5 +6,6 @@ import Preview from './Preview';
 import Login from './Login';
 import Dashboard from './Dashboard';
 import Footer from './Footer';
+import UserProfile from './UserProfile';
 
-export { Header, MovieList, Trailer, Home, Preview, Login, Dashboard, Footer };
+export { Header, MovieList, Trailer, Home, Preview, Login, Dashboard, Footer, UserProfile };
