@@ -35,8 +35,8 @@ export const editUserProfile = (fullName) => (dispatch) => {
     .then((response) => {
       dispatch(successEditProfile(response.data));
     })
-    .catch((response) => {
-      const error = response.response.data;
+    .catch(({ response }) => {
+      const error = response.data;
 
       dispatch(errorEditProfile(error));
     });
