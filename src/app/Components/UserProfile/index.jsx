@@ -129,7 +129,7 @@ const UserProfile = ({ onClick, photoPath, fullName, setFullName }) => (
                   bg-blue-500
                   text-lg
               "
-          onClick={() => onClick()}
+          onClick={onClick}
         >
           SAVE
         </div>
