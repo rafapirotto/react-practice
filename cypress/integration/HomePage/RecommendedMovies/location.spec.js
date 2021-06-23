@@ -5,7 +5,8 @@ import { HOME_URL, TRAILERS_ROUTE } from '../../../constants';
 context('RecommendedMovies', () => {
   beforeEach(() => {
     cy.viewport(1024, 768);
-    window.localStorage.setItem('token', process.env.REACT_APP_TOKEN);
+    localStorage.setItem('token', Cypress.env('token'));
+    'token', process.env.REACT_APP_TOKEN;
     cy.visit(HOME_URL);
   });
 

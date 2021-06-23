@@ -6,14 +6,20 @@ import { DASHBOARD_ROUTE } from '../../../../../app/routes';
 
 const propTypes = {
   title: PropTypes.string.isRequired,
+  to: PropTypes.string,
 };
 
-const FooterItem = ({ title }) => (
+const defaultProps = {
+  to: DASHBOARD_ROUTE,
+};
+
+const FooterItem = ({ title, to }) => (
   <div className="pb-2">
-    <Link to={DASHBOARD_ROUTE}>{title}</Link>
+    <Link to={to}>{title}</Link>
   </div>
 );
 
 FooterItem.propTypes = propTypes;
+FooterItem.defaultProps = defaultProps;
 
 export default FooterItem;

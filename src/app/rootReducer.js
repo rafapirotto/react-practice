@@ -6,6 +6,7 @@ import ContinueWatchingReducer from './Containers/ContinueWatchingContainer/duck
 import MostViewedReducer from './Containers/MostViewedContainer/duck/reducers';
 import RecommendedReducer from './Containers/RecommendedMoviesContainer/duck/reducers';
 import LoginReducer from './Containers/LoginContainer/duck/reducers';
+import UserProfileReducer from './Containers/UserProfileContainer/duck/reducers';
 
 const appReducer = combineReducers({
   popularMovies: PopularMoviesReducer,
@@ -14,6 +15,7 @@ const appReducer = combineReducers({
   mostViewedMovies: MostViewedReducer,
   recommendedMovies: RecommendedReducer,
   login: LoginReducer,
+  userProfile: UserProfileReducer,
 });
 
 const rootReducer = (state, action) => appReducer(state, action);

@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useLocation } from 'react-router-dom';
 
 import AuthenticatedHeader from './Components/AuthenticatedHeader';
 import NonAuthenticatedHeader from './Components/NonAuthenticatedHeader';
 import { isAuthenticated } from '../../utils';
 
 const Header = () => {
-  const { state } = useSelector((state) => state.login);
+  const { pathname } = useLocation();
 
-  useEffect(() => {}, [state]);
+  useEffect(() => {}, [pathname]);
 
   return isAuthenticated() ? <AuthenticatedHeader /> : <NonAuthenticatedHeader />;
 };

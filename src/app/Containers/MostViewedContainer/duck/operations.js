@@ -11,8 +11,8 @@ export const getMostViewed = () => (dispatch) => {
     .then((response) => {
       dispatch(successGetMostViewed(response.data));
     })
-    .catch((response) => {
-      const error = response.response.data;
+    .catch(({ response }) => {
+      const error = response.data;
 
       dispatch(errorGetMostViewed(error));
     });

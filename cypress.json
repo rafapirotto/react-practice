@@ -1,1 +1,5 @@
-{}
+{
+  "env": {
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWZhcGlyb3R0b0BnbWFpbC5jb20iLCJpYXQiOjE2MjI2NTIwNTV9.WegIZ44M1eTY90ioVRqoKsChqnI7DP-nJ9HXWfG8kbo"
+  }
+}

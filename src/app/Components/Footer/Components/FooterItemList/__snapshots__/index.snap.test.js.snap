@@ -48,7 +48,7 @@ exports[`Matches the snapshot 1`] = `
     className="pb-2"
   >
     <a
-      href="/dashboard"
+      href="/toc-and-privacy-policy"
       onClick={[Function]}
     >
       Privacy

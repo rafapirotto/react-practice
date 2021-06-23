@@ -1,0 +1,62 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.separator {
+  border-color: #979797;
+}
+
+.userImageBackground {
+  background-color: #f2f2f2;
+  border: 0.767442px #979797;
+}
+
+.profileImage {
+  width: 165px;
+  height: 165px;
+}
+
+.defaultImage {
+  width: 140px;
+  height: 140px;
+  margin: 10px;
+}
+
+.blueBorder {
+  border: 1px solid #0578ff;
+}
+
+.checked {
+  height: 40px;
+  width: 40px;
+}
+
+.checkedPadding {
+  padding: 0.55rem;
+}
+
+.checkbox {
+  height: 40px;
+}
+
+.saveBtn {
+  letter-spacing: 2px;
+  flex-grow: 1;
+  min-width: 80px;
+}
+
+.cancelBtn {
+  letter-spacing: 2px;
+  flex-grow: 1.5;
+  min-width: 100px;
+}
+
+.deleteBtn {
+  letter-spacing: 2px;
+  flex-grow: 2;
+  min-width: 230px;
+}
+
+.growTwice {
+  flex-grow: 2;
+}

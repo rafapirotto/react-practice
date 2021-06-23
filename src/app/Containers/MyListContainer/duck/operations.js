@@ -11,8 +11,8 @@ export const getMyList = () => (dispatch) => {
     .then((response) => {
       dispatch(successGetMyList(response.data));
     })
-    .catch((response) => {
-      const error = response.response.data;
+    .catch(({ response }) => {
+      const error = response.data;
 
       dispatch(errorGetMyList(error));
     });

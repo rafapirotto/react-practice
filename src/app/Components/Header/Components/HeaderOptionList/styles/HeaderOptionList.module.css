@@ -1,6 +1,7 @@
-.arrow {
-  width: 8px;
-  height: 5px;
+.logoutBtn {
+  width: 24px;
+  height: 24px;
+  border-radius: 0.2rem;
 }
 
 .search {
@@ -11,4 +12,5 @@
 .userImage {
   width: 28px;
   height: 28px;
+  border-radius: 1rem;
 }

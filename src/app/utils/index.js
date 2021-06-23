@@ -1,5 +1,6 @@
 export const headers = () => {
-  const token = process.env.REACT_APP_TOKEN;
+  const token = getToken();
+
   return {
     headers: {
       Authorization: `Bearer ${token}`,
@@ -11,6 +12,10 @@ export const randomIntegerBetween = (min, max) => Math.floor(Math.random() * (ma
 
 export const getRandomIndex = (array) => Math.floor(Math.random() * array.length);
 
-export const isAuthenticated = () => localStorage.getItem('token');
+export const getToken = () => localStorage.getItem('token');
+
+export const isAuthenticated = () => getToken() !== null;
 
 export const saveUserDataInLocalStorage = (token) => localStorage.setItem('token', token);
+
+export const logout = () => localStorage.removeItem('token');

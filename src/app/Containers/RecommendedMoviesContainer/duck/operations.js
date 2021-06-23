@@ -11,9 +11,8 @@ export const getRecommended = () => (dispatch) => {
     .then((response) => {
       dispatch(successGetRecommended(response.data));
     })
-    .catch((response) => {
-      const error = response.response.data;
-
+    .catch(({ response }) => {
+      const error = response.data;
       dispatch(errorGetRecommended(error));
     });
 };

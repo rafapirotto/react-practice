@@ -14,8 +14,8 @@ export const login = (email, password) => (dispatch) => {
       saveUserDataInLocalStorage(response.data.token);
       dispatch(successLogin(response.data));
     })
-    .catch((response) => {
-      const error = response.response.data;
+    .catch(({ response }) => {
+      const error = response.data;
 
       dispatch(errorLogin(error));
     });

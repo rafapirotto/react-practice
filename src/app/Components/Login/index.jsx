@@ -6,9 +6,10 @@ import { LOGIN_ROUTE } from '../../routes';
 import fb from './assets/fb.png';
 import { login } from '../../Containers/LoginContainer/duck/operations';
 import { Error, Spinner } from '../../../common/Components';
-import { LOADING, SUCCESS, ERROR } from '../../../common/constants';
+import { LOADING, ERROR } from '../../../common/constants';
 import { DASHBOARD_ROUTE } from '../../routes';
 import styles from './styles/Login.module.css';
+import { isAuthenticated } from '../../utils';
 
 const Login = (props) => {
   const [email, setEmail] = useState('');
@@ -17,7 +18,7 @@ const Login = (props) => {
   const { state } = useSelector((state) => state.login);
 
   useEffect(() => {
-    if (state === SUCCESS) {
+    if (isAuthenticated()) {
       props.history.push(DASHBOARD_ROUTE);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
