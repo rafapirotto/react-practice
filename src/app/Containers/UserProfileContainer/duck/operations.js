@@ -17,8 +17,8 @@ export const getUserProfile = () => (dispatch) => {
     .then((response) => {
       dispatch(successGetProfile(response.data));
     })
-    .catch((response) => {
-      const error = response.response.data;
+    .catch(({ response }) => {
+      const error = response.data;
 
       dispatch(errorGetProfile(error));
     });

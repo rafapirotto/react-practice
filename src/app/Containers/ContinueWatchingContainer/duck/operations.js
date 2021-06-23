@@ -10,8 +10,8 @@ export const getContinueWatching = () => (dispatch) => {
     .then((response) => {
       dispatch(successContinueWatching(response.data));
     })
-    .catch((response) => {
-      const error = response.response.data;
+    .catch(({ response }) => {
+      const error = response.data;
 
       dispatch(errorContinueWatching(error));
     });

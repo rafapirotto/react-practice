@@ -10,8 +10,8 @@ export const getMovies = () => (dispatch) => {
     .then((response) => {
       dispatch(successGetMovies(response.data));
     })
-    .catch((response) => {
-      const error = response.response.data;
+    .catch(({ response }) => {
+      const error = response.data;
 
       dispatch(errorGetMovies(error));
     });
