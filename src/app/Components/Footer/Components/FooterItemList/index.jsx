@@ -1,6 +1,7 @@
 import React from 'react';
 
 import FooterItem from '../FooterItem';
+import { PRIVACY_ROUTE } from '../../../../routes';
 
 const FooterItemList = () => {
   const footerTitles = [
@@ -19,7 +20,18 @@ const FooterItemList = () => {
   ];
 
   const renderFooterItems = (titles) =>
-    titles.map((title) => <FooterItem title={title} key={title} />);
+    titles.map((title) => {
+      let props = {
+        title,
+        key: title,
+      };
+
+      if (title === 'Privacy') {
+        props = { ...props, to: PRIVACY_ROUTE };
+      }
+
+      return <FooterItem {...props} />;
+    });
 
   return (
     <div
