@@ -10,6 +10,7 @@ import { USER_PROFILE_ROUTE, LOGIN_ROUTE } from '../../../../routes';
 import { SUCCESS } from '../../../../../common/constants';
 import { getUserProfile } from '../../../../Containers/UserProfileContainer/duck/operations';
 import { logout } from '../../../../utils';
+import logoutBtn from './assets/logout.png';
 
 const HeaderOptionList = () => {
   const { state, content } = useSelector((state) => state.userProfile);
@@ -31,11 +32,11 @@ const HeaderOptionList = () => {
           to={USER_PROFILE_ROUTE}
         />
         <HeaderOption
-          src="https://toppng.com/uploads/preview/logout-comments-logout-icon-white-transparent-11563200974vvdol0inuw.png"
+          src={logoutBtn}
           alt="logout"
           styles={styles.logoutBtn}
           to={LOGIN_ROUTE}
-          onClick={() => logout()}
+          onClick={logout}
         />
       </div>
     )
