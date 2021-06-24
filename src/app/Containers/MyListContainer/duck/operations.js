@@ -7,7 +7,7 @@ export const getMyList = () => (dispatch) => {
   dispatch(requestGetMyList());
 
   return axios
-    .get(`${process.env.REACT_APP_BASE_URL}/${process.env.REACT_APP_LISTS_URL}/1`, headers())
+    .get(`${process.env.REACT_APP_BASE_URL}/${process.env.REACT_APP_LISTS_URL}/2`, headers())
     .then((response) => {
       dispatch(successGetMyList(response.data));
     })
