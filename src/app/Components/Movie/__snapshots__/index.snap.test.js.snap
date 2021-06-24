@@ -2,13 +2,20 @@
 
 exports[`Matches the snapshot 1`] = `
 <div
-  className="mr-2 mb-4"
+  className="pr-4 pb-4 relative"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
 >
-  <img
-    alt="some-movie"
-    className="max-w-sm max-h-48"
-    src="some-url"
-  />
+  <a
+    href="/dashboard/trailers/1"
+    onClick={[Function]}
+  >
+    <img
+      alt="some-movie"
+      className="max-w-sm max-h-48 transform duration-500 hover:scale-110"
+      src="some-url"
+    />
+  </a>
   <div
     className="flex mt-1"
   >
