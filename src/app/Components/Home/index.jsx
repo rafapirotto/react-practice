@@ -32,7 +32,6 @@ const Home = () => {
           selector={continueWatchingMoviesSelector}
           watchingProgress
         />
-
         <MovieListContainer
           operation={getMostViewed}
           title="Most Viewed"

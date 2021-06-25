@@ -6,7 +6,6 @@ context('Trailer', () => {
   beforeEach(() => {
     cy.viewport(1024, 768);
     localStorage.setItem('token', Cypress.env('token'));
-    'token', process.env.REACT_APP_TOKEN;
     cy.visit(`${TRAILERS_ROUTE}1`);
   });
 

@@ -11,7 +11,7 @@ context('MyList', () => {
 
   describe('Clicking the first movie in my list section', () => {
     it('Should redirect to the "trailers" url', () => {
-      cy.get('#my-list > :first-child').click();
+      cy.get('#my-list > :first-child').click(10, 10);
       cy.url().should('include', TRAILERS_ROUTE);
     });
   });
